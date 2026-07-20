@@ -4,43 +4,303 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <meta
+    name="description"
+    content="Noah Seaner's analytics portfolio featuring sports analytics, business intelligence, statistical modeling, and data visualization projects."
+  >
+
   <title>Noah Seaner | Analytics Portfolio</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 80px 24px;
-      line-height: 1.6;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 8px;
-    }
-
-    p {
-      font-size: 1.2rem;
-    }
-
-    a {
-      margin-right: 16px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <h1>Noah Seaner</h1>
+  <header class="site-header">
+    <nav class="navigation container" aria-label="Main navigation">
+      <a class="logo" href="#home">Noah Seaner</a>
 
-  <p>
-    Data analyst applying statistical modeling, simulation, and visualization
-    to player evaluation and business decision-making.
-  </p>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-  <p>
-    <a href="https://github.com/noah-seaner">GitHub</a>
-    <a href="https://www.linkedin.com/in/noah-seaner/">LinkedIn</a>
-  </p>
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <p class="eyebrow">Analytics Portfolio</p>
+
+        <h1>Using data to answer meaningful questions.</h1>
+
+        <p class="hero-description">
+          I am an early-career data analyst applying statistical modeling,
+          simulation, and visualization to player evaluation, sports
+          performance, and business decision-making.
+        </p>
+
+        <div class="button-group">
+          <a class="button button-primary" href="#projects">
+            View Projects
+          </a>
+
+          <a
+            class="button button-secondary"
+            href="https://github.com/noah-seaner"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            class="button button-secondary"
+            href="https://www.linkedin.com/in/noah-seaner/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2>Analytics across sports, research, and business.</h2>
+
+          <p>
+            I earned a bachelor's degree in Mathematics and German from
+            Lafayette College, with a concentration in Statistics and a minor
+            in Data Science. I am pursuing a Master of Science in Business
+            Intelligence &amp; Analytics at Saint Joseph's University.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <h3>Sports Analytics</h3>
+            <p>
+              Player evaluation, performance tracking, predictive modeling,
+              simulation, and interactive visualizations.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Business Intelligence</h3>
+            <p>
+              Dashboard development, exploratory analysis, experimentation,
+              reporting, and data-driven recommendations.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Statistical Research</h3>
+            <p>
+              Bayesian modeling, regression analysis, Monte Carlo simulation,
+              hypothesis testing, and uncertainty quantification.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Featured Work</p>
+          <h2>Selected analytics projects</h2>
+
+          <p>
+            These projects demonstrate how I approach analytical questions,
+            select appropriate methods, and communicate findings.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <h3>Bayesian Analysis of MLB Offensive Performance</h3>
+
+            <p>
+              Used Bayesian MCMC methods to evaluate whether torpedo bat usage
+              was associated with changes in MLB batting average, on-base
+              percentage, and slugging percentage.
+            </p>
+
+            <ul class="tag-list">
+              <li class="tag">R</li>
+              <li class="tag">Bayesian Modeling</li>
+              <li class="tag">MCMC</li>
+              <li class="tag">Baseball</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Monte Carlo Season Simulation</h3>
+
+            <p>
+              Developed a simulation framework using more than 50,000 trials
+              to estimate season outcomes and conference tournament
+              probabilities.
+            </p>
+
+            <ul class="tag-list">
+              <li class="tag">R</li>
+              <li class="tag">Monte Carlo</li>
+              <li class="tag">Forecasting</li>
+              <li class="tag">Basketball</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Basketball Shot Profile Analysis</h3>
+
+            <p>
+              Built interactive shot charts to analyze player shot selection,
+              spatial scoring tendencies, and shooting efficiency.
+            </p>
+
+            <ul class="tag-list">
+              <li class="tag">R</li>
+              <li class="tag">Plotly</li>
+              <li class="tag">Visualization</li>
+              <li class="tag">Player Evaluation</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Technical Skills</p>
+          <h2>Tools and methods</h2>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <h3>Programming</h3>
+            <p>
+              R, SQL, tidyverse, plotly, nimble, coda, MCMCvis, and RStudio.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Statistical Methods</h3>
+            <p>
+              Regression analysis, Bayesian modeling, Monte Carlo simulation,
+              hypothesis testing, and exploratory data analysis.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Visualization &amp; Technology</h3>
+            <p>
+              Tableau, Excel, Google Sheets, GitHub, FlightScope, dashboards,
+              and interactive reporting.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2>Applied analytics experience</h2>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <h3>FlightScope Data Analyst Intern</h3>
+            <p>
+              All-Star Sports Academy
+            </p>
+            <p>
+              Analyze player tracking data and communicate performance insights
+              to coaches and athletes to support evaluation and development.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Manager of Coaching Analytics</h3>
+            <p>
+              Lafayette Men's Basketball
+            </p>
+            <p>
+              Developed models, simulations, dashboards, and analytical
+              workflows while leading a team of undergraduate analysts.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Excel &amp; Tableau Trainee</h3>
+            <p>
+              Global Career Accelerator
+            </p>
+            <p>
+              Analyzed business datasets, conducted A/B testing, and created
+              dashboards to communicate recommendations.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2>Let's connect.</h2>
+
+          <p>
+            I am interested in opportunities involving sports analytics,
+            player development, quantitative research, business intelligence,
+            and data analysis.
+          </p>
+        </div>
+
+        <div class="button-group">
+          <a
+            class="button button-primary"
+            href="mailto:noahseaner@gmail.com"
+          >
+            Email Me
+          </a>
+
+          <a
+            class="button button-secondary"
+            href="https://github.com/noah-seaner"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View GitHub
+          </a>
+
+          <a
+            class="button button-secondary"
+            href="https://www.linkedin.com/in/noah-seaner/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Noah Seaner. Built with HTML and CSS.</p>
+    </div>
+  </footer>
 </body>
 </html>
