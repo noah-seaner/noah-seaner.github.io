@@ -252,6 +252,20 @@ img {
   font-size: 0.9rem;
   font-style: italic;
 }
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.project-link-secondary {
+  opacity: 0.75;
+  font-size: 0.95rem;
+}
+
 /* =========================
    Accessibility
 ========================== */
