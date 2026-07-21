@@ -168,7 +168,6 @@ button:focus-visible {
 }
 
 .eyebrow,
-.category-number,
 .project-type,
 .resume-label,
 .hero-panel-label,
@@ -792,25 +791,35 @@ button:focus-visible {
 
 @media (max-width: 720px) {
   html {
-    scroll-padding-top: 8rem;
+    scroll-padding-top: 5.5rem;
   }
 
   .header-inner {
-    min-height: auto;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.8rem;
-    padding-block: 1rem;
+    min-height: 4.75rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 0;
+  }
+
+  .site-logo {
+    flex-shrink: 0;
   }
 
   .site-nav {
-    width: 100%;
-    overflow-x: auto;
-    padding-bottom: 0.2rem;
+    width: auto;
+    overflow-x: visible;
+    padding-bottom: 0;
   }
 
   .nav-list {
-    width: max-content;
+    width: auto;
+    gap: 0.85rem;
+  }
+
+  .nav-list a {
+    font-size: 0.84rem;
   }
 
   .hero {
@@ -839,6 +848,20 @@ button:focus-visible {
 
   .footer-links {
     justify-content: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  .nav-list {
+    gap: 0.65rem;
+  }
+
+  .nav-list a {
+    font-size: 0.78rem;
+  }
+
+  .nav-list li:first-child {
+    display: none;
   }
 }
 
