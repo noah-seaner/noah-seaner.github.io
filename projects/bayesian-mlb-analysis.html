@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Bayesian Analysis of MLB Offensive Performance | Noah Seaner</title>
+    <title>Evaluating the Impact of Torpedo Bats Using Bayesian Modeling | Noah Seaner</title>
 
     <meta
         name="description"
@@ -70,7 +70,7 @@
             </p>
 
             <h1>
-                Bayesian Analysis of MLB Offensive Performance
+                Evaluating the Impact of Torpedo Bats Using Bayesian Modeling
             </h1>
 
             <p class="project-summary">
@@ -84,7 +84,9 @@
                     • Why it matters
                 -->
 
-              In this project, I investigated the impact of the torpedo bat on key hitting metrics: batting average, on-base percentage, and slugging percentage. 
+              When several Major League Baseball players began using torpedo bats during the 2025 season, analysts and fans questioned whether the new bat design improved offensive performance.
+              To investigate this question, I compared the 2024 and early-2025 offensive statistics of 18 players using Bayesian statistical modeling.
+              Rather than relying on traditional hypothesis testing, the analysis estimated the magnitude of uncertainty of changes in batting average, on-base percentage, and slugging percentage, illustrating both the strengths and limitations of Bayesian methods when evaluating emerging trends from limited observational data.
 
             </p>
 
@@ -157,7 +159,7 @@
                 What made this question interesting?
                 -->
 
-              At the time of the completion of the project, the torpedo bat was one of the most popular things to talk about in the world of baseball. 
+              At the beginning of the 2025 MLB season, the torpedo bat was one of the most popular talking points in the world of baseball. 
               Designed by Aaron Leanhardt, a former hitting coach for the New York Yankees with a PhD in physics, the torpedo bat was meant to be the answer to combat the rise in pitching quality over recent seasons.
               The bat he created, which breaks none of MLB's regulations on bats, redistributes weight to where a hitter prefers to make contact with the ball - known as the "barrel".
               This trend caught my attention as not only a fan of America's Pastime, but also as an analyst, due to the technical qualities that went into the design of the bat
@@ -178,7 +180,7 @@
         <div class="container case-study">
 
             <h2>
-                Research Question
+                The Question
             </h2>
 
             <p>
@@ -211,23 +213,49 @@
         <div class="container case-study">
 
             <h2>
-                Data
+                The Data
             </h2>
 
             <p>
-
-                <!--
-                Describe
-
-                • Data source
-                • Sample size
-                • Variables
-                • Cleaning
-                • Assumptions
-                -->
-
+            
+            The analysis used a manually assembled dataset of 18 Major League Baseball hitters featured in a list published by FOX Sports of players frequently using the torpedo bat during the early portion of the 2025 season.
+            Each player was represented twice: once for the 2024 season and once for the 2025 season through the date of data collection.
+                
             </p>
 
+            <p>
+
+            The resulting dataset contained 36 player-season observations and included each player's team, at-bats, batting average, on-base percentage, and slugging percentage.
+            The paired structure allowed each player's early-2025 production to be compared with his own performance during the previous season.
+            
+            </p>
+
+            <h3>Performance Metrics</h3>
+
+            <p>
+
+            I evaluated three complementary measures of offensive performance. 
+            <strong>Batting average</strong> measures the proportion of offical at-bats that resulted in hits. 
+            <strong>On-base percentage</strong> measures how frequently a hitter reaches base through a hit, walk, or hit-by-pitch.
+            <strong>Slugging percentage</strong> measures total bases per at-bat and gives greater weight to extra-base hits (doubles, triples, and home runs).
+                
+            </p>
+
+            <p>
+
+            Together, these metrics capture different dimensions of hitting: contact frequency, overall ability to reach base, and power production.
+                
+            </p>
+
+            <div class="case-study-note">
+                <p>
+
+                <strong>Study limitations:</strong> Each player served as his own baseline by comparing his 2024 performance before adopting the torpedo bat with his early-2025 performance after adoption.
+                While this paired design controls for many player-specific differences, the analysis does not include a concurrent comparison group of players who did not adopt the torpedo bat.
+                Additionally, the 2025 observations were collected early in the season and therefore represent fewer at-bats than the full 2024 season, increasing the amount of uncertainty of the estimated performance changes.
+                    
+                </p>
+            
         </div>
 
     </section>
@@ -242,30 +270,76 @@
         <div class="container case-study">
 
             <h2>
-                Methodology
+                The Approach
             </h2>
+
+            <h3>Paired Performnance Comparison</h3>
 
             <p>
 
-                <!--
-                Explain
-
-                Bayesian model
-
-                Prior
-
-                Posterior
-
-                Likelihood
-
-                MCMC implementation
-
-                Diagnostics
-
-                etc.
-                -->
-
+            I treated the project as a paired before-and-after analysis.
+            For each of the 18 hitters, I compared batting average, on-base percentage, and slugging percentage from the 2024 season with the player's corresponding values from the early portion of the 2025 season.
+            
             </p>
+
+            <p>
+
+            Pairing observations by player helps control for stable differences in individual ability.
+            Instead of comparing two unrelated groups of hitters, the analysis asks whether the same players tended to perform differently across the two periods.
+                
+            </p>
+
+            <h3>Bayesian Framework</h3>
+
+            <p>
+
+            I explored the comparison using Bayesian modeling in R with the <strong>nimble</strong> package.
+            A Bayesian approach represents an unknown performance change as a distribution of plausible values rather than a single estimate.
+            This makes it possible to communicate both the likely direction of a change and the uncertainty surrounding it.
+            
+            </p>
+
+            <p>
+
+            Separate models were considered for batting average, on-base percentage, and slugging percentage because each statistic measures a different component of offensive production.
+            The models and used bounded prior distributions informed by the realistic range of MLB rate statistics.
+            
+            </p>
+
+            <h3>Posterior Simulation and Diagnostics</h3>
+
+            <p>
+
+            Posterior sampling was performed with Markov chain Monte Carlo methods. 
+            Each model was run for 20,000 iterations, with the first 5,000 iterations discarded as burn-in so that inference would be based on the stabilized portion of the sampling process.
+            
+            </p>
+
+            <p>
+
+            I examined trace plots, posterior summaries, and effective sample sizes to assess whether the sampling process was stable and whether the retained draws provided enough information for interpretation.
+            
+            </p>
+
+            <p>
+
+            The intended goal was to estimate the direction, magnitude, and uncertainty of the change from 2024 to early 2025 for each offensive metric.
+            Because the analysis is observational and the two periods contain very different numbers of at-bats, the results should be interpreted as exploratory evidence rather than as proof that the bats caused a change in performance.
+            
+            </p>
+
+            <details class="technical-detail">
+                <summary>Technical note on model development</summary>
+
+                <div class="technical-details-comment">
+                    <p>
+
+                    The initial project implementation used separate NIMBLE models for batting average, on-base percentage, and slugging percentage.
+                    Before presenting the posterior estimates as final evidence, the likelihood and season-effect specification shoud be revised so that the observed player-level outcomes are explicitly connected to the parameters being estimated.
+                    
+                    </p>
+                </div>
+            </details>
 
         </div>
 
@@ -281,17 +355,8 @@
         <div class="container case-study">
 
             <h2>
-                Results
+                The Results
             </h2>
-
-            <p>
-
-                <!--
-                Summarize findings.
-                -->
-
-            </p>
-
 
             <!-- Figure 1 -->
 
@@ -351,20 +416,26 @@
 
                 <li>
 
-                    <!-- Finding -->
+                    Comparing each player to his own previous season reduced the influence of differences in talent level and isolated changes associated with the adoption period.
 
                 </li>
 
                 <li>
 
-                    <!-- Finding -->
+                    Bayesian modeling provided probability distributions for offensive performance rather than single point estimates, allowing uncertainty to be incorporated directly into the analysis.
 
                 </li>
 
                 <li>
 
-                    <!-- Finding -->
+                    Early-season data produced substantially wider posterior uncertainty than would be expected from a full season of observations, emphasizing the importance of sample size when interpreting player performance.
 
+                </li>
+
+                <li>
+
+                    The project demonstrates how Bayesian methods can be applied to emerging sports questions when complete data are not yet available, while also highlighting the importance of carefully considering study design before drawing casual conclusions.
+                    
                 </li>
 
             </ul>
@@ -383,21 +454,22 @@
         <div class="container case-study">
 
             <h2>
-                Reflection
+                What I Learned
             </h2>
 
             <p>
 
-                <!--
+            This project was my first opportunity to apply Bayesian modeling to real sports analytics question.
+            While learning the mechanics of posterior estimation and MCMC sampling was valuable, I gained an even greater appreciation for the importance of study design.
+            Building the models required me think critically about how observational data should be collected, what assumptions the analysis depended on, and how uncertainty should be communicated when the available evidence is limited.
+                
+            </p>
 
-                What you learned.
+            <p>
 
-                What you would improve.
-
-                Future work.
-
-                -->
-
+            If I were to continue this project, I would expand the dataset to include additional 2025 games, incorporate a matched group of players who did not adopt the torpedo bat, and refine the Bayesian model to better account for differences in sample size across seasons.
+            These improvements would strengthen the analysis while providing a more rigorous assessment of the relationship between bat design and offensive performance.
+            
             </p>
 
         </div>
