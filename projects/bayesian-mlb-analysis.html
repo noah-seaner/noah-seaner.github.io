@@ -350,55 +350,164 @@
          Results
     =========================================== -->
 
-    <section class="section">
+    
+    <section id="results" class="case-study-section">
+    <div class="section-container">
+        <h2>Results</h2>
 
-        <div class="container case-study">
+        <p class="section-intro">
+            Separate Bayesian models were used to estimate changes in batting
+            average, on-base percentage, and slugging percentage between the
+            2024 and early-2025 observation periods. Each posterior distribution
+            represents the range of plausible values for the estimated change
+            in that metric.
+        </p>
 
-            <h2>
-                The Results
-            </h2>
+        <!-- Batting Average -->
+        <article class="result-block">
+            <div class="result-copy">
+                <h3>Batting Average</h3>
 
-            <!-- Figure 1 -->
+                <p>
+                    The batting-average model estimated the change between each
+                    player's 2024 performance and early-2025 performance after
+                    adopting the torpedo bat.
+                </p>
+            </div>
 
-            <figure class="case-study-figure">
-
-                <img
-                    src="../assets/images/projects/bayesian-analysis/figure-1.png"
-                    alt="Describe figure"
-                >
-
-                <figcaption>
-
-                    Figure 1.
-
-                    <!-- Explain figure -->
-
-                </figcaption>
-
-            </figure>
-
-
-            <!-- Figure 2 -->
-
-            <figure class="case-study-figure">
-
-                <img
-                    src="../assets/images/projects/bayesian-analysis/figure-2.png"
-                    alt="Describe figure"
-                >
+            <figure class="interactive-figure">
+                <iframe
+                    src="../assets/interactive/bayesian-mlb/ba-posterior.html"
+                    title="Interactive posterior distribution for batting average"
+                    class="interactive-chart"
+                    loading="lazy">
+                </iframe>
 
                 <figcaption>
-
-                    Figure 2.
-
+                    <strong>Figure 1.</strong> Posterior distribution of the
+                    estimated change in batting average. Hover over the curve
+                    to inspect individual values.
                 </figcaption>
-
             </figure>
 
-        </div>
+            <div class="result-interpretation">
+                <h4>Interpretation</h4>
 
-    </section>
+                <p>
+                    
+                    We can see that the average batting average for players who adopted the torpedo bat is 0.249.
+                    The initial value for this statistic was the league average at the time of the project's completion, which was 0.242.
+                    Since the credible interval for this metric does not include 0, we can conclude that players who adopted the torpedo bat batted above the league average.
+                    
+                </p>
+            </div>
+        </article>
 
+        <!-- On-Base Percentage -->
+        <article class="result-block">
+            <div class="result-copy">
+                <h3>On-Base Percentage</h3>
+
+                <p>
+                    The on-base-percentage model evaluated whether players'
+                    ability to reach base changed between the two observation
+                    periods.
+                </p>
+            </div>
+
+            <figure class="interactive-figure">
+                <iframe
+                    src="../assets/interactive/bayesian-mlb/obp-posterior.html"
+                    title="Interactive posterior distribution for on-base percentage"
+                    class="interactive-chart"
+                    loading="lazy">
+                </iframe>
+
+                <figcaption>
+                    <strong>Figure 2.</strong> Posterior distribution of the
+                    estimated change in on-base percentage.
+                </figcaption>
+            </figure>
+
+            <div class="result-interpretation">
+                <h4>Interpretation</h4>
+
+                <p>
+                    
+                    Here, we can see that the average on-base percentage for players who adopted the torpedo bat was 0.300.
+                    The initial value for this statistic, similar to the other two, was the league average at the time of the project's completion, which was 0.316.
+                    Since the credible interval for this statistic does not include 0, we can safely conclude that players who adopted the torpedo bat got on-base slightly less often than the league average.
+                    
+                </p>
+            </div>
+        </article>
+
+        <!-- Slugging Percentage -->
+        <article class="result-block">
+            <div class="result-copy">
+                <h3>Slugging Percentage</h3>
+
+                <p>
+                    The slugging-percentage model examined changes in power
+                    production and total bases per at-bat.
+                </p>
+            </div>
+
+            <figure class="interactive-figure">
+                <iframe
+                    src="../assets/interactive/bayesian-mlb/slg-posterior.html"
+                    title="Interactive posterior distribution for slugging percentage"
+                    class="interactive-chart"
+                    loading="lazy">
+                </iframe>
+
+                <figcaption>
+                    <strong>Figure 3.</strong> Posterior distribution of the
+                    estimated change in slugging percentage.
+                </figcaption>
+            </figure>
+
+            <div class="result-interpretation">
+                <h4>Interpretation</h4>
+
+                <p>
+                    Add your specific interpretation of the slugging-percentage
+                    posterior here.
+
+                    Lastly, we can see that the average slugging percentage for players who adopted the torpedo bat was 0.400.
+                    As is the case with the other two variables, the initial value for this statistic was the league average at the time of the project's completion, which was 0.391.
+                    Similarly, the credible interval for this statistic does not include 0, so we can safely conclude that players who adopted the torpedo bat slugged at a percentage higher than the league average.
+                </p>
+            </div>
+        </article>
+
+        <!-- Model Diagnostics -->
+        <article class="result-block">
+            <div class="result-copy">
+                <h3>Model Diagnostics</h3>
+
+                <p>
+                    Traceplots were reviewed to assess whether the MCMC chains
+                    mixed adequately and sampled consistently from the
+                    posterior distributions.
+                </p>
+            </div>
+
+            <figure class="case-study-figure">
+                <img
+                    src="../assets/images/bayesian-mlb/traceplots.png"
+                    alt="MCMC traceplots for the batting average, on-base percentage, and slugging percentage models"
+                    loading="lazy">
+
+                <figcaption>
+                    <strong>Figure 4.</strong> MCMC traceplots used to evaluate
+                    chain mixing and sampling stability across the three
+                    models.
+                </figcaption>
+            </figure>
+        </article>
+    </div>
+</section>
 
     <!-- ==========================================
          Key Findings
