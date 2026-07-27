@@ -1,1 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
 
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="A basketball shooting analytics project using practice and game-film data to create weekly and end-of-season dashboards for coaching staff."
+  >
+
+  <title>Basketball Shooting Analytics | Noah Seaner</title>
+
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="../index.html" class="site-logo">
+        Noah Seaner
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li>
+          <a href="../assets/documents/Noah-Seaner-resume.pdf">
+            Resume
+          </a>
+        </li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+      <div class="container">
+
+        <p class="project-category">
+          Sports Analytics
+        </p>
+
+        <h1>Basketball Shooting Analytics</h1>
+
+        <p class="project-subtitle">
+          Developing weekly and end-of-season shooting dashboards to help
+          coaching staff evaluate team and player shooting tendencies.
+        </p>
+
+        <div class="project-tags">
+          <span>R</span>
+          <span>Plotly</span>
+          <span>Data Visualization</span>
+          <span>Basketball Analytics</span>
+          <span>Film Analysis</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Project Summary -->
+    <section class="project-section">
+      <div class="container">
+
+        <h2>Project Summary</h2>
+
+        <p>
+          This project transformed shot-location data collected from practice
+          and game film into interactive dashboards for a collegiate basketball
+          coaching staff. Weekly editions provided visual summaries of each
+          player's recent shooting tendencies, while the end-of-season
+          dashboard offered a complete view of team and individual performance
+          across defined scoring zones.
+        </p>
+
+        <p>
+          The dashboards were designed to make shooting data easier to interpret
+          and apply during player development, practice planning, and broader
+          offensive evaluation.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- Project Overview -->
+    <section class="project-section alternate-section">
+      <div class="container">
+
+        <h2>Project Overview</h2>
+
+        <p>
+          Traditional box-score statistics summarize whether shots were made,
+          but they often provide limited context about where attempts occurred
+          or how shooting behavior changed over time. This project organized
+          individual shot attempts into meaningful scoring zones and presented
+          the results through court-based visualizations.
+        </p>
+
+        <p>
+          Throughout the season, the coaching staff received updated shooting
+          charts that combined practice and game-film observations. Each report
+          provided an accessible visual outlook on how frequently and
+          efficiently players shot from different areas of the court.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- Research Question -->
+    <section class="project-section">
+      <div class="container">
+
+        <h2>Research Question</h2>
+
+        <p class="research-question">
+          How can practice and game-film data be transformed into clear,
+          actionable shooting profiles that help coaches evaluate team and
+          individual scoring tendencies?
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- Data -->
+    <section class="project-section alternate-section">
+      <div class="container">
+
+        <h2>Data</h2>
+
+        <p>
+          The dataset combined manually recorded shooting information from two
+          primary sources:
+        </p>
+
+        <ul>
+          <li>
+            <strong>Practice data:</strong> Shot attempts documented during
+            team practices and shooting activities.
+          </li>
+
+          <li>
+            <strong>Game-film data:</strong> Shot attempts identified and coded
+            through film review.
+          </li>
+        </ul>
+
+        <p>
+          Each observation included information needed to identify the shooter,
+          shot outcome, and court location. Court coordinates were then used to
+          assign each attempt to a defined scoring zone.
+        </p>
+
+        <p>
+          To protect player privacy on the public portfolio, individual players
+          are identified by jersey number rather than by name.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- Methodology -->
+    <section class="project-section">
+      <div class="container">
+
+        <h2>Methodology</h2>
+
+        <p>
+          The analysis pipeline converted raw shot records into team and player
+          shooting profiles through the following process:
+        </p>
+
+        <ol>
+          <li>
+            Combined practice and game-film observations into a standardized
+            dataset.
+          </li>
+
+          <li>
+            Cleaned player identifiers, shot outcomes, and court coordinates.
+          </li>
+
+          <li>
+            Assigned each shot to a predefined scoring zone.
+          </li>
+
+          <li>
+            Calculated makes, attempts, shooting percentage, and shot
+            distribution by zone.
+          </li>
+
+          <li>
+            Created separate summaries for the full team and each individual
+            player.
+          </li>
+
+          <li>
+            Built an interactive dashboard that allows users to move between
+            team and player profiles through a dropdown menu.
+          </li>
+        </ol>
+
+        <p>
+          The visual design used multiple court views to present complementary
+          perspectives on shooting performance, including efficiency and shot
+          volume across the defined scoring zones.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- Weekly Reporting -->
+    <section class="project-section alternate-section">
+      <div class="container">
+
+        <h2>Weekly Coaching Reports</h2>
+
+        <p>
+          During the season, updated shooting charts were produced for the
+          coaching staff on a weekly basis. These reports provided a current
+          visual snapshot of each player's shooting profile and made it easier
+          to identify changes in shot selection or efficiency.
+        </p>
+
+        <p>
+          Because the reports combined practice and game data, they offered a
+          broader view of shooting behavior than either source could provide
+          independently.
+        </p>
+
+        <figure class="case-study-figure">
+          <img
+            src="../assets/images/shot-profile/weekly-shooting-chart.png"
+            alt="Example of a weekly basketball shooting chart organized by scoring zone"
+          >
+
+          <figcaption>
+            Example weekly shooting report used to communicate player shooting
+            tendencies to the coaching staff.
+          </figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+
+    <!-- End-of-Season Dashboard -->
+    <section class="project-section">
+      <div class="container">
+
+        <h2>End-of-Season Dashboard</h2>
+
+        <p>
+          The end-of-season dashboard consolidates the full season of available
+          shooting data. The default team view summarizes how the roster
+          performed from each scoring zone, while the dropdown menu allows the
+          user to select individual player profiles.
+        </p>
+
+        <p>
+          This structure allows coaches and analysts to compare team-wide
+          tendencies with the shot distribution and efficiency of individual
+          players.
+        </p>
+
+        <div class="interactive-chart">
+          <iframe
+            src="../assets/interactive/shot-profile/end-of-season-dashboard.html"
+            title="Interactive end-of-season basketball shooting dashboard"
+            loading="lazy"
+            width="100%"
+            height="900"
+            frameborder="0"
+          ></iframe>
+        </div>
+
+        <p class="figure-note">
+          Use the dropdown menu in the dashboard to move between the full-team
+          profile and individual player profiles.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- Results -->
+    <section class="project-section alternate-section">
+      <div class="container">
+
+        <h2>Results</h2>
+
+        <p>
+          The completed dashboard provides two levels of analysis:
+        </p>
+
+        <div class="results-grid">
+
+          <article class="result-card">
+            <h3>Team Profile</h3>
+
+            <p>
+              The team view summarizes shooting volume and efficiency across
+              every scoring zone, providing an overview of the offense's
+              strongest and least efficient areas.
+            </p>
+          </article>
+
+          <article class="result-card">
+            <h3>Player Profiles</h3>
+
+            <p>
+              Individual dashboards show where each player generated attempts,
+              how efficiently those attempts were converted, and how each
+              player's profile differed from the team as a whole.
+            </p>
+          </article>
+
+          <article class="result-card">
+            <h3>Coaching Application</h3>
+
+            <p>
+              The dashboards translated detailed film and practice records into
+              a format that could be reviewed quickly by the coaching staff.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Key Findings -->
+    <section class="project-section">
+      <div class="container">
+
+        <h2>Key Findings</h2>
+
+        <ul class="key-findings">
+          <li>
+            Combining practice and game-film data created a more complete view
+            of shooting behavior than relying on game statistics alone.
+          </li>
+
+          <li>
+            Zone-based summaries made differences in player shot selection and
+            efficiency easier to identify.
+          </li>
+
+          <li>
+            Weekly reporting supported ongoing evaluation rather than limiting
+            the analysis to a single end-of-season review.
+          </li>
+
+          <li>
+            The interactive dashboard allowed one reporting tool to serve both
+            team-level and individual-player analysis.
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+
+    <!-- Reflection -->
+    <section class="project-section alternate-section">
+      <div class="container">
+
+        <h2>Reflection</h2>
+
+        <p>
+          This project reinforced the importance of designing analytics for the
+          people who will use them. The primary goal was not simply to produce
+          detailed statistical output, but to create a visual tool that coaches
+          could interpret quickly and apply within an existing basketball
+          workflow.
+        </p>
+
+        <p>
+          It also required maintaining a repeatable data-processing and
+          reporting pipeline throughout the season. Automating the cleaning,
+          aggregation, and chart-building steps made it possible to produce
+          consistent weekly updates as new practice and game data became
+          available.
+        </p>
+
+        <p>
+          Future development could include comparisons between practice and
+          game performance, time-based trend analysis, expected-points
+          calculations, and filters for shot type, lineup, or game situation.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- Project Navigation -->
+    <section class="project-navigation">
+      <div class="container">
+
+        <a href="../index.html#projects" class="button secondary-button">
+          &larr; Back to projects
+        </a>
+
+        <a
+          href="monte-carlo-season-simulation.html"
+          class="button primary-button"
+        >
+          Next project &rarr;
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        &copy; 2026 Noah Seaner. Built with HTML, CSS, and JavaScript.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
