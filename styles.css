@@ -956,3 +956,36 @@ button:focus-visible {
         height: 440px;
     }
 }
+
+/* =========================================================
+   15. Project Card Thumbnails
+   ========================================================= */
+
+.project-card {
+  overflow: hidden;
+}
+
+.project-card-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: #f3f4f6;
+}
+
+.project-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-card-image img,
+.project-card:focus-within .project-card-image img {
+  transform: scale(1.03);
+}
+
+.project-card-content {
+  padding: 1.5rem;
+}
