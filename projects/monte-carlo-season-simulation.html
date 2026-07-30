@@ -1,1 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
 
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="A Monte Carlo simulation project forecasting Patriot League regular-season and conference tournament outcomes."
+  >
+
+  <title>Monte Carlo Season Simulation | Noah Seaner</title>
+
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+        <div class="container header-inner">
+
+            <a href="../index.html" class="site-logo">
+                Noah Seaner
+            </a>
+
+            <nav class="site-nav">
+
+                <ul class="nav-list">
+
+                    <li>
+                        <a href="../index.html#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#projects">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#resume">Resume</a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+    </header>
+
+  <main>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+      <div class="container">
+        <p class="project-eyebrow">
+          Sports Analytics • Monte Carlo Simulation
+        </p>
+
+        <h1>
+          Forecasting a College Basketball Season with Monte Carlo Simulation
+        </h1>
+
+        <p class="subtitle">
+          Iterative regular-season projections and conference tournament
+          simulations developed to quantify likely outcomes as new results
+          became available.
+        </p>
+
+        <div class="project-meta">
+          <div>
+            <span class="project-meta-label">Tools</span>
+            <span>R, Excel</span>
+          </div>
+
+          <div>
+            <span class="project-meta-label">Methods</span>
+            <span>Monte Carlo Simulation, Probability Modeling</span>
+          </div>
+
+          <div>
+            <span class="project-meta-label">Domain</span>
+            <span>College Basketball</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Project Summary -->
+    <section class="section section">
+      <div class="container project-content">
+
+        <h2>Project Summary</h2>
+
+        <p>
+          This project used Monte Carlo simulation to forecast the Patriot
+          League men's basketball season in two phases. During conference play,
+          the model was rerun at regular intervals to estimate the likely
+          outcomes of each team's remaining schedule. After the regular season
+          concluded, a separate simulation modeled the conference tournament
+          and estimated each team's probability of advancing through every
+          round.
+        </p>
+
+        <p>
+          Rather than predicting a single final record or tournament bracket,
+          the simulation generated distributions of possible outcomes. This
+          made it possible to communicate both the most likely results and the
+          uncertainty surrounding them.
+        </p>
+      </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="section alt-section">
+      <div class="container project-content">
+
+        <h2>Project Overview</h2>
+
+        <p>
+          Before conference play began, I collected box score data from every
+          Patriot League team's non-conference games. These results were used
+          to estimate each team's typical pace, offensive efficiency, defensive
+          efficiency, and game-to-game variability.
+        </p>
+
+        <p>
+          Those estimates became the inputs for a simulation framework that
+          generated possible scores for every remaining conference matchup.
+          The regular-season model was updated after each team had completed
+          the same number of conference games. Once the conference tournament
+          bracket was finalized, the same general framework was adapted to
+          estimate complete tournament brackets.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Research Questions -->
+    <section class="section section">
+      <div class="container project-content">
+
+        <h2>Research Questions</h2>
+
+        <div class="research-question">
+          <h3>Regular Season</h3>
+
+          <p>
+            Given the results available at a particular point in the season,
+            how many of its remaining games was each team most likely to win,
+            and which individual matchups were most likely to shape its final
+            conference record?
+          </p>
+        </div>
+
+        <div class="research-question">
+            <h3>Conference Tournament</h3>
+
+            <p>
+              Based on the completed regular season and simulated matchup
+              outcomes, how likely was each Patriot League team to reach the
+              semifinals, advance to the championship game, and win the
+              conference tournament?
+            </p>
+          </div>
+
+        </div>
+    </section>
+
+    <!-- Data -->
+    <section class="section alt-section">
+      <div class="container project-content">
+
+        <h2>Data</h2>
+
+        <p>
+          The model was initially built from manually collected box score data
+          covering every Patriot League team's non-conference schedule. Each
+          game represented an observation of a team's performance and playing
+          style before conference competition began.
+        </p>
+
+        <p>
+          For every game, I recorded:
+        </p>
+
+        <ul>
+          <li>Home or away designation</li>
+          <li>Points scored</li>
+          <li>Points allowed</li>
+          <li>Field goal attempts (FGA)</li>
+          <li>Three-point attempts (3PA)</li>
+          <li>Free throw attempts (FTA)</li>
+          <li>Offensive rebounds (ORB)</li>
+          <li>Turnovers (TOV)</li>
+        </ul>
+
+        <p>
+          The raw box score statistics were then used to estimate possessions,
+          offensive rating, and defensive rating.
+        </p>
+
+        <div class="formula-grid">
+          
+          <div class="formula-card">
+            <h3>Possessions</h3>
+
+            <p class="formula">
+              POS = FGA + 0.44 x FTA - ORB + TOV
+            </p>
+
+            <p>
+              Possessions provided an estimate of each team's typical pace
+            </p>
+          </div>
+
+          <div class="formula-card">
+            <h3>Offensive Rating</h3>
+
+            <p class="formula">
+              OFF Rtg = (PTS ÷ POS) × 100
+            </p>
+
+            <p>
+              Offensive rating represented points scored per 100 estimated
+              possessions.
+            </p>
+          </div>
+
+          <div class="formula-card">
+            <h3>Defensive Rating</h3>
+
+            <p class="formula">
+              DEF Rtg = (PTS Allowed ÷ POS) × 100
+            </p>
+
+            <p>
+              Defensive rating represented points allowed per 100 estimated
+              possessions.
+            </p>
+          </div>
+
+        </div>
+
+        <p>
+          For each team, I calculated the mean and standard deviation of
+          possessions, offensive rating, and defensive rating across its
+          non-conference games. These summary statistics formed the
+          distributions used in the simulation.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="section section">
+      <div class="container project-content">
+
+        <h2>Methodology</h2>
+
+        <h3>Modeling Team Performance</h3>
+
+        <p>
+          Team performance was treated as a variable rather than fixed. For each
+          simulated game, values for possessions, offensive rating, and
+          defensive rating were drawn from normal distributions.
+        </p>
+
+        <p>
+          The mean and standard deviation of each distribution matched the
+          corresponding statistics calculated from the team's observed
+          non-conference games. This allowed the model to represent both a
+          team's typical level of performance and its natural game-to-game
+          variation.
+        </p>
+
+        <div class="method-steps">
+
+          <div class="method-step">
+            <span class="method-step-number">1</span>
+
+            <div>
+              <h3>Estimate team distribution</h3>
+
+              <p>
+                Calculate each team's mean and standard deviation for pace,
+                offensive rating, and defensive rating.
+              </p>
+            </div>
+          </div>
+
+          <div class="method-step">
+            <span class="method-step-number">2</span>
+
+            <div>
+              <h3>Generate simulated performances</h3>
+
+              <p>
+                Draw a simulated possessions value, offensive rating, and
+                defensive rating for each team from its corresponding normal
+                distributions.
+              </p>
+            </div>
+          </div>
+
+          <div class="method-step">
+            <span class="method-step-number">3</span>
+
+            <div>
+              <h3> Convert efficiency into scores</h3>
+
+              <p>
+                Combine the simulated pace and efficiency values to estimate
+                the number of points each team would score and allow.
+              </p>
+            </div>
+          </div>
+
+          <div class="method-step">
+            <span class="method-step-number">4</span>
+
+            <div>
+              <h3>Repeat the matchup</h3>
+
+              <p>
+                Simulate each potential conference game thousands of times and
+                aggregate the results into estimated win probabilities.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <h3>Iterative Regular-Season Simulation</h3>
+
+        <p>
+          Every potential conference matchup was simulated 10,000 times. The
+          resulting game-level probabilities were then used to simulate each
+          team's remaining conference schedule.
+        </p>
+
+        <p>
+          The full conference simulation was rerun after every team had
+          completed the same number of games. For example, one update was
+          produced after every team had played its first conference game,
+          another after every had played its second game, and so on.
+        </p>
+
+        <p>
+          Completed games were treated as known results, while all remaining
+          games were simulated. This created a sequence of updated forecasts as
+          the season progressed.
+        </p>
+
+        <h3>Conference Tournament Simulation</h3>
+
+        <p>
+          After the regular season concluded, the finalized tournament bracket
+          was simulated 50,000 times. Each simulation generated a complete
+          tournament path, with winners advancing through the bracket until a
+          confernece champion was selected.
+        </p>
+
+        <p>
+          Increasing the simulation count provided more stable estimates for
+          less common bracket combinations and lower-probability championship
+          outcomes.
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+         Footer
+    =========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <p>
+                © 2026 Noah Seaner
+            </p>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="../index.html#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="../index.html#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
