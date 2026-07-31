@@ -377,6 +377,363 @@
 
       </div>
     </section>
+
+    <!-- Regular Season Simulation -->
+    <section class="section section-alt">
+      <div class="container project-content">
+
+        <h2>In-Season Conference Simulation</h2>
+
+        <p>
+          The iterative model displayed the probability that each team would win
+          every possible number of games remaining on its schedule. This
+          provided a distribution of potential outcomes rather than reducing
+          the forecast to a single projected final record.
+        </p>
+
+        <figure class="case-study-figure">
+          <img
+            src="../assets/images/monte-carlo/win-distribution.png"
+            alt="Table showing Lafayette's probability of winning different numbers of remaining games"
+            >
+
+          <figcaption>
+            Simulated probability distribution for the number of games Lafayette
+            would win over the remained of its conference schedule (recorded at the
+            9-game checkpoint).
+          </figcaption>
+        </figure>
+          
+
+        <h3>Remaining Game Projections</h3>
+
+        <p>
+          A second table summarized the estimated outcome of each remaining
+          matchup. This made it possible to identify games with a clear
+          favorite as well as games whose simulated outcomes were more evenly
+          divided.
+        </p>
+
+        <figure class="case-study-figure">
+          <img
+            src="../assets/images/monte-carlo/game-outcomes.png"
+            alt="Table showing Lafayette's projected results for the remaining games on its schedule"
+            >
+
+          <figcaption>
+            Matchup-level projections underlying the simulated distributions
+            of Lafayette's final conference record (also recorded at the
+            9-game checkpoint).
+          </figcaption>
+
+      </div>
+    </section>
+
+    <!-- Tournament Simulation -->
+    <section class="section section">
+      <div class="container project-content">
+
+        <h2>Conference Tournament Simulation</h2>
+
+        <p>
+          Once the regular season ended, the project shifted from simulating a
+          fixed schedule to simulating a conditional tournament bracket. The
+          result of each round determined the possible matchups in the next,
+          allowing the model to estimate advancement probabilities and common
+          tournament paths.
+        </p>
+
+        <h3>Advancement and Championship Odds</h3>
+
+        <p>
+          The primary tournament output summarized each team's probability of
+          reaching the semifinals, advancing to the championship game, and
+          winning the Patriot League tournament.
+        </p>
+
+        <figure class="case-study-figure">
+          <img
+            src="../assets/images/monte-carlo/thumbnail.png"
+            alt="Table showing each Patriot League's team's semifinal, championship game, and conference title odds"
+            >
+
+          <figcaption>
+            Estimated advancement probabilities generated from 50,000
+            simulated conference tournament brackets.
+          </figcaption>
+        </figure>
+
+        <h3>Potential Tournament Matchups</h3>
+
+        <p>
+          Because later-round matchups depended on the results of earlier
+          games, not every pairing occurred with the same frequency. This table
+          recorded every matchup generated during the simulations and ranked
+          them by how often they appeared.
+        </p>
+
+        <figure class="case-study-figure">
+          <img
+            src="../assets/images/monte-carlo/likely-matchups.png"
+            alt="Table ranking possible Patriot League tournament matchups by the number of times they occurred in the simulation"
+            >
+
+          <figcaption>
+            The top-10 most likely matchups sorted by their frequency across the
+            simulated brackets.
+          </figcaption>
+        </figure>
+
+        <h3>Comparing Projected Brackets</h3>
+
+        <p>
+          Two different bracket summaries were generated from the simulations.
+          The most likely bracket selected the favored team in each projected
+          matchup, while the most common bracket represented the complete 
+          bracket that appeared most frequently across all simulations.
+        </p>
+
+        <p>
+          These brackets were not necessarily identical. A collection of the
+          most likely individual outcomes does not always produce the most
+          frequently occurring complete tournament path.
+        </p>
+
+        <div class="figure-grid">
+
+          <figure class="case-study-figure">
+            <img
+              src="../assets/images/monte-carlo/most-likely-bracket.png"
+              alt="Patriot League tournament bracket based on the most likely winner of each matchup"
+              >
+
+            <figcaption>
+              Most likely bracket based on the projected winner of each
+              individual matchup.
+            </figcaption>
+          </figure>
+
+          <figure class="case-study-figure">
+            <img
+              src="../assets/images/monte-carlo/most-common-bracket.png"
+              alt="The complete Patriot League tournament bracket that occurred most frequently in the simulations"
+              >
+
+            <figcaption>
+              Complete bracket that appeared most frequently across all
+              tournament simulations.
+            </figcaption>
+          </figure>
+
+      </div>
+    </section>
+
+    <!-- Model Evaluation -->
+    <section class="section section-alt">
+      <div class="container project-content">
+
+        <h2>Model Evaluation</h2>
+
+        <p>
+          After the conference tournament concluded, I compared the actual
+          results with the simulated brackets. The final evaluation table
+          tracked how many simulated brackets had correctly reproduced the
+          observed tournament results.
+        </p>
+
+        <p>
+          This comparison was not intended to judge the model solely by whether
+          it predicted one exact bracket. The simulation was designed to
+          represent a range of possible outcomes, including both common and
+          low-probability tournament paths.
+        </p>
+
+        <figure class="case-study-figure">
+          <img
+            src="../assets/images/monte-carlo/model-evaluation.png"
+            alt="Table showing the number of simulated brackets that correctly predicted the actual Patriot League tournament results"
+            >
+
+          <figcaption>
+            Retrospective comparison of the simulated brackets with the
+            tournament's actual results.
+          </figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="section section">
+      <div class="container project-content">
+
+        <h2>Results</h2>
+
+        <p>
+          The regular-season simulation provided an updated view of the
+          conference after each common checkpoint in the schedule. Instead of
+          relying only on current standings, the model estimated the
+          distribution of each team's possible remaining wins and highlighted
+          the matchups most likely to affect its final record.
+        </p>
+
+        <p>
+          The tournament simulation extended the same probabilistic approach
+          to a bracket in which each result altered the set of possible future
+          matchups. The outputs summarized advancement odds, likely opponent
+          combinations, common bracket paths, and championship probabilities.
+        </p>
+
+        <p>
+          Comparing the simulation with the actual tournament also provided a
+          retrospective view of how plausible the observed outcome had appeared
+          before the tournament began.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Key Findings -->
+    <section class="section section-alt">
+      <div class="container project-content">
+
+        <h2>Key Findings</h2>
+
+        <div class="key-findings-grid">
+
+          <article class="key-finding">
+            <h3>Probabilities were more informative than point predictions</h3>
+
+            <p>
+              Reporting a range of possible win totals communicated uncertainty
+              more effectively than assigning each team a single projected
+              record.
+            </p>
+          </article>
+
+          <article class="key-finding">
+            <h3>Forecasts evolved as the season progressed</h3>
+
+            <p>
+              Rerunning the model at common schedule checkpoints showed how
+              actual results changed the distribution of possible conference
+              outcomes.
+            </p>
+          </article>
+
+          <article class="key-finding">
+            <h3>Tournament paths depended on conditional matchups</h3>
+
+            <p>
+              Teams' advancement probabilities reflected not only their own
+              projected strength, but also the likelihood of facing particular
+              opponents in later rounds.
+            </p>
+          </article>
+
+          <article class="key-finding">
+            <h3>The most likely outcomes did not form the only plausible bracket</h3>
+
+            <p>
+              Comparing the most likely and most common brackets demonstrated
+              the difference between evaluating games and evaluating
+              complete tournament paths.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Limitations -->
+    <section class="section section">
+      <div class="container project-content">
+
+        <h2>Limitations</h2>
+
+        <p>
+          The simulation relied on several simplifying assumptions that should
+          be considered when interpreting its results.
+        </p>
+
+        <ul>
+          <li>
+            Team pace and efficiency were modeled using normal distributions
+            derived initially from non-conference results.
+          </li>
+
+          <li>
+            The model assumed that each team's underlying performance remained
+            relatively stable throughout conference play.
+          </li>
+
+          <li>
+            Possessions, offensive rating, and defensive rating were simulated
+            from team-level summary statistics rather than an opponent-adjusted
+            model.
+          </li>
+
+          <li>
+            The model did not explicitly account for injuries, lineup changes,
+            player availability, travel, rest, or other situational factors.
+          </li>
+
+          <li>
+            Normal distributions can produce extreme values that may not always
+            reflect realistic basketball outcomes unless additional boundaries
+            are applied.
+          </li>
+
+          <li>
+            The results were sensitive to the size and quality of the
+            non-conference sample used to estimate each team's distribution.
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- Reflection -->
+    <section class="section section-alt">
+      <div class="container project-content">
+
+        <h2>Reflection</h2>
+
+        <p>
+          This project strengthened my understanding of how simulations can be
+          used to communicate uncertainty in sports forecasting. Rather than
+          asking the model to identify one definitive outcome, I used repeated
+          simulations to describe the range and relative likelihood of possible
+          results.
+        </p>
+
+        <p>
+          Building the model in stages also demonstrated the importance of
+          creating a repeatable analytical pipeline. The regular-season code
+          had to incorporate completed results, update the remaining schedule,
+          rerun thousands of simulated seasons, and produce interpretable
+          outputs at several points during conference play.
+        </p>
+
+        <p>
+          The tournament portion introduced an additional challenge because
+          future matchups were conditional on earlier results. Simulating full
+          brackets required the code to update the tournament structure after
+          each round and aggregate advancement probabilities across many
+          possible paths.
+        </p>
+
+        <p>
+          A future version of the model could update team distributions
+          throughout conference play, incorporate opponent-adjusted efficiency,
+          model correlations between pace and performance, and include player
+          availability or lineup information.
+        </p>
+
+      </div>
+    </section>
+
   </main>
 
   <!-- ==========================================
