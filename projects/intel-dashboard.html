@@ -1,1 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
 
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+    >
+
+  <meta
+    name="description"
+    content="A Tableau dashboard evaluating regional electricity production, renewable energy use, and energy generation trends to support a hypothetical Intel data center location decision"
+    >
+
+  <title>
+    Data Center Location Analysis | Noah Seaner
+  </title>
+
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+        <div class="container header-inner">
+
+            <a href="../index.html" class="site-logo">
+                Noah Seaner
+            </a>
+
+            <nav class="site-nav">
+
+                <ul class="nav-list">
+
+                    <li>
+                        <a href="../index.html#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#projects">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#resume">Resume</a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+    </header>
+
+  <main>
+
+    <!-- Project Hero -->
+    <section class="project-hero section">
+      <div class="container">
+
+        <p class="eyebrow">
+          Business Intelligence • Tableau
+        </p>
+
+        <h1>
+          Selecting a Data Center Location with Energy Market Analytics
+        </h1>
+
+        <p class="project-subtitle">
+          A Tableau dashboard evaluating regional energy surplus, renewable
+          generation, and electricity production trends to support a
+          hypothetical Intel data center location decision.
+        </p>
+
+        <div class="project-meta">
+
+          <div>
+            <span class="project-meta-label">Tools</span>
+            <span>Tableau</span>
+          </div>
+
+          <div>
+            <span class="project-meta-label">Methods</span>
+            <span>
+              Dashboard Design, Calculated Fields, Filtering, Data Visualization
+            </span>
+          </div>
+
+          <div>
+            <span class="project-meta-label">Domain</span>
+            <spain>Energy and Infrastructure</spain>
+          </div>
+
+      </div>
+    </section>
+
+    <!-- Project Summary -->
+    <section class="section section-alt">
+      <div class="container project-content">
+
+        <h2>Project Summary</h2>
+
+        <p>
+          This project used regional electricity production data to support a
+          hypothetical decision about where Intel should locate a new data
+          center. Because data centers require large and continuous supplies of
+          electricity, the analysis focused on identifying regions that
+          produced more electricity than they consumed and regions that relied
+          heavily on renewable energy sources.
+        </p>
+
+        <p>
+          I used Tableau to create a decision-support dashboard that combined
+          high-level regional comparisons with an interactive view of energy
+          generation over time. The final dashboard was designed to help a
+          stakeholder compare regional energy capacity, sustainability, and
+          generation patterns before selecting a preferred location.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Business Problem -->
+    <section class="section section">
+      <div class="contained project-content">
+
+        <h2>Business Problem</h2>
+
+        <p>
+          Intel was considering potential locations for a new data center.
+          Since data centers consume substantial amounts of electricity, a
+          suitable region needed to demonstrate both sufficient generation
+          capacity and a favorable energy mix.
+        </p>
+
+        <p>
+          The dashboard was designed to answer the following business question:
+        </p>
+
+        <blockquote class="project-question">
+          Which region provides the strongest combination of energy surplus
+          and renewable electricity generation for a new Intel data center?
+        </blockquote>
+
+        <div class="objective-grid">
+
+          <article class="objective-card">
+            <h3>Evaluate Capacity</h3>
+
+            <p>
+              Identify regions that generate more electricity than they demand.
+            </p>
+          </article>
+
+          <article class="objective-card">
+            <h3>Evaluate Sustainability</h3>
+
+            <p>
+              Compare the proportion of regional electricity generated from
+              renewable sources.
+            </p>
+          </article>
+
+          <article class="objective-card">
+            <h3>Explore Generation Trends</h3>
+
+            <p>
+              Allow users to examine how electricity production changes across
+              regions, energy sources, and time periods.
+            </p>
+          </article>
+
+          <article class="objective-card">
+            <h3>Support a Recommendation</h3>
+
+            <p>
+              Use the combined evidence to recommend the strongest candidate
+              region.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Data -->
+    <section class="section section-alt">
+      <div class="container project-content">
+
+        <h2>Data</h2>
+
+        <p>
+          The project used two primary datasets. One supported regional
+          comparisons, while the other provided more detailed generation data
+          by source and time.
+        </p>
+
+        <div class="data-grid">
+
+          <article class="data-card">
+            <h3>Regional Energy Dataset</h3>
+
+            <p>
+              This dataset contained region-level measures related to
+              electricity demand, generation, and renewable energy production.
+            </p>
+
+            <ul>
+              <li>Region</li>
+              <li>Energy demand</li>
+              <li>Net generation</li>
+              <li>Hydropower and pumped storage</li>
+              <li>Solar energy</li>
+              <li>Wind energy</li>
+            </ul>
+          </article>
+
+          <article class="data-card">
+            <h3>Hourly Generation Dataset</h3>
+
+            <p>
+              This dataset contained more granular information about the amount
+              of electricity generated by individual energy sources.
+            </p>
+
+            <ul>
+              <li>Balancing Authority</li>
+              <li>Date and hour</li>
+              <li>Energy source</li>
+              <li>Energy generated</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <p>
+          Balancing authorities coordinate electricity exchange between
+          providers and regions to help maintain a reliable balance between
+          electricity supply and demand.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Dashboard Development -->
+    <section class="section section">
+      <div class="container project-content">
+
+        <h2>Dashboard Development</h2>
+
+        <p>
+          Before assembling the final dashboard, I created four individual
+          Tableau worksheets. Each visualization was selected to address a
+          different part of the business decision.
+        </p>
+
+        <div class="visualization-grid">
+
+          <article class="visualization-card">
+            <h3>Net Production by Region</h3>
+
+            <p>
+              A bar chart compared the difference between total electricity
+              generation and total electricity demand by region.
+            </p>
+
+            <div class="calculation-block">
+              <span class="calculation-label">Calculated field</span>
+
+              <code>
+                SUM([Net Generation]) - SUM([Demand])
+              </code>
+            </div>
+
+            <p>
+              A positive value indicated that a region generated more
+              electricity than it consumed, while a negative value indicated
+              that it depended on electricity imported from elsewhere.
+            </p>
+          </article>
+
+          <article class="visualization-card">
+            <h3>Renewable Energy Percentage</h3>
+
+            <p>
+              A second bar chart compared renewable energy production as a
+              percentage of total net generation.
+            </p>
+
+            <div class="calculation-block">
+              <span class="calculation-label">Calculated field</span>
+
+              <code>
+                SUM([Renewable Energy]) / SUM([Net Generation])
+              </code>
+            </div>
+
+            <p>
+              The renewable energy measure combined the renewable sources
+              available in the regional dataset, including hydropower, solar,
+              and wind generation.
+            </p>
+          </article>
+
+          <article class="visualization-card">
+            <h3>Energy Source Treemap</h3>
+
+            <p>
+              A treemap displayed the relative amount of electricity generated
+              by each utility source. The size of each section represented the
+              source's contribution to total generation.
+            </p>
+
+            <p>
+              This allowed users to quickly identify the dominant energy
+              sources represented in the data.
+            </p>
+          </article>
+
+          <article class="visualization-card">
+            <h3>Energy Generation Over Time</h3>
+
+            <p>
+              A line chart showed the amount of electricity generated from
+              different sources over time for a selected region.
+            </p>
+
+            <p>
+              Users could filter the chart by region and change the time
+              aggregation between day, week, and month.
+            </p>
+          </article>
+
+        </div>
+      
+      </div>
+    </section>
+
+    <!-- Dashboard -->
+    <section class="section section-alt">
+      <div class="container project-content project-content-wide">
+
+        <h2>Final Tableau Dashboard</h2>
+
+        <p>
+          The four worksheets were combined into a single dashboard that
+          presented both summary-level and detailed views of the energy data.
+          The layout allowed a user to begin with broad regional comparisons
+          and then investigate electricity generation patterns for an
+          individual region.
+        </p>
+
+        <figure class="case-study-figure dashboard-figure">
+          <img
+            src="../assets/images/intel-dashboard/thumbnail.png"
+            alt="Tableau dashboard comparing regional net electricity production, renewable energy percentage, utility sources, and energy generation over time"
+            >
+
+          <figcaption>
+            Final Tableau dashboard used to compare regional energy surplus,
+            renewable generation, dominant utility sources, and production
+            trends over time.
+          </figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- Dashboard Walkthrough -->
+    <section class="section section">
+      <div class="container project-content">
+
+        <h2>How the Dashboard Supports the Decision</h2>
+
+        <div class="method-steps">
+
+          <div class="method-step">
+            <span class="method-step-number">1</span>
+
+            <div>
+              <h3>Compare Regional Energy Surplus</h3>
+
+              <p>
+                The net-production chart identifies which regions generate more
+                electricity than they consume and therefore may be better
+                positioned to support additional demand.
+              </p>
+            </div>
+          </div>
+
+          <div class="method-step">
+            <span class="method-step-number">2</span>
+
+            <div>
+              <h3>Compare Renewable Energy Use</h3>
+
+              <p>
+                The renewable-percentage chart highlights regions whose
+                electricity generation relies more heavily on renewable
+                sources.
+              </p>
+            </div>
+          </div>
+
+          <div class="method-step">
+            <span class="method-step-number">3</span>
+
+            <div>
+              <h3>Understand the Energy Mix</h3>
+
+              <p>
+                The treemap reveals which generation sources make up the
+                largest share of the available electricity supply.
+              </p>
+            </div>
+          </div>
+
+          <div class="method-step">
+            <span class="method-step-number">4</span>
+
+            <div>
+              <h3>Investigate Regional Trends</h3>
+
+              <p>
+                The interactive line chart allows the user to select a region
+                and evaluate how different energy sources perform over daily,
+                weekly, and monthly periods.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Recommendation -->
+    <section class="section section-alt">
+      <div class="container project-content">
+
+        <h2>Recommendation</h2>
+
+        <div class="recommendation-banner">
+
+          <p class="recommendation-label">
+            Recommended Region
+          </p>
+
+          <h3>Northwest</h3>
+
+          <p>
+            Based on the measures included in the dashboard, the Northwest
+            region offered the strongest combination of energy surplus and
+            renewable electricity generation.
+          </p>
+
+        </div>
+
+        <div class="recommendation-grid">
+
+          <article class="recommendation-card">
+            <h3>Positive Net Production</h3>
+
+            <p>
+              The Northwest generated more electricity than it consumed,
+              indicating that the region had an energy surplus within the
+              available data.
+            </p>
+          </article>
+
+          <article class="recommendation-card">
+            <h3>Renewable Energy Reliance</h3>
+
+            <p>
+              The region relied heavily on renewable electricity sources,
+              making it attractive from a sustainability perspective.
+            </p>
+          </article>
+
+          <article class="recommendation-card">
+            <h3>Strong Overall Balance</h3>
+
+            <p>
+              When energy capacity and renewable generation were evaluated
+              together, the Northwest provided the strongest balance of the
+              regions considerd.
+            </p>
+          </article>
+
+        </div>
+
+        <p>
+          Based on these indicators, I recommended the Northwest as the most
+          suitable region for Intel's hypothetical data center.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Key Findings -->
+    <section class="section section">
+      <div class="container project-content">
+
+        <h2>Key Findings</h2>
+
+        <div class="key-findings-grid">
+
+          <article class="key-finding">
+            <h3>Energy surplus varied substantially by region</h3>
+
+            <p>
+              Some regions generated more electricity than they consumed,
+              while others relied more heavily on electricity supplied from
+              outside the region.
+            </p>
+          </article>
+
+          <article class="key-finding">
+            <h3>High generation did not always mean high sustainability</h3>
+
+            <p>
+              A region's total electricity output needed to be considered
+              separately from the proportion supplied by renewable sources.
+            </p>
+          </article>
+
+          <article class="key-finding">
+            <h3>Energy mix added important context</h3>
+
+            <p>
+              The treemap showed that regions with similar production totals
+              could rely on very different combinations of energy sources.
+            </p>
+          </article>
+
+          <article class="key-finding">
+            <h3>Interactivity supported deeper analysis</h3>
+
+            <p>
+              Region and time-period filters made it possible to move beyond a
+              static comparison and examine changes in generation patterns.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Limitations -->
+    <section class="section section-alt">
+      <div class="container project-content">
+
+        <h2>Limitations</h2>
+
+        <p>
+          The dashboard addressed electricity availability and renewable energy
+          use, but a real data center location decision would require
+          additional financial, environmental, and operational considerations.
+        </p>
+
+        <ul>
+          <li>
+            The analysis did not include electricity prices or projected energy
+            costs.
+          </li>
+
+          <li>
+            Land availability, construction costs, and local real estate
+            conditions were not considered.
+          </li>
+
+          <li>
+            The dashboard did not account for tax incentives, regulations, or
+            local economic development programs.
+          </li>
+
+          <li>
+            Water availability and cooling requirements were outside the scope
+            of the analysis.
+          </li>
+
+          <li>
+            Transmission capacity and proximity to existing infrastructure were
+            not directly evaluated.
+          </li>
+
+          <li>
+            The analysis was based on historical energy data and did not model
+            future changes in electricity demand or generation capacity.
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- Reflection -->
+    <section class="section section">
+      <div class="container project-content">
+
+        <h2>Reflection</h2>
+
+        <p>
+          This project demonstrated that effective business intelligences
+          involves more than creating individaul visualizations. The larger
+          challenge was identifying which measures directly addressed the
+          business question and arranging those measures into a dashboard that
+          supported a clear decision.
+        </p>
+
+        <p>
+          Creating calculated fields for net production and renewable energy
+          percentage transformed the raw data into metrics that were more useful
+          for evaluating potential data center locations. The dashboard then
+          combined those high-level indicators with an interactive view of
+          generation by source and time.
+        </p>
+
+        <p>
+          The project also reinforced the importance of separating analytical
+          evidence from the final recommendation. The dashboard allowed users
+          to examine the underlying comparisons, while the recommendation
+          summarized the region that best balanced energy capacity and
+          sustainability within the available data.
+        </p>
+
+        <p>
+          A future version could incorporate electricity costs, carbon
+          intensity, infrastructure capacity, land availability, regulatory
+          incentives, and environmental constraints to create a more complete
+          site-selection model.
+        </p>
+
+      </div>
+    </section>
+
+    <section class="section section-alt">
+
+        <div class="container project-links">
+
+            <a
+                class="button button-secondary"
+                href="../index.html#projects"
+            >
+                ← Back to Projects
+            </a>
+
+        </div>
+
+    </section>
+
+    
+  </main>
+
+  <!-- ==========================================
+         Footer
+    =========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <p>
+                © 2026 Noah Seaner
+            </p>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="../index.html#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="../index.html#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </footer>
+  
+</body>
+</html>
