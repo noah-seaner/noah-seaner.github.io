@@ -1097,3 +1097,113 @@ button:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+.project-question {
+  margin: 2rem 0;
+  padding: 1.5rem 1.75rem;
+  border-left: 4px solid var(--accent-color);
+  background: var(--surface-color);
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.objective-grid,
+.data-grid,
+.visualization-grid,
+.recommendation-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.objective-grid,
+.visualization-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.data-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.recommendation-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.objective-card,
+.data-card,
+.visualization-card,
+.recommendation-card {
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--surface-color);
+}
+
+.objective-card h3,
+.data-card h3,
+.visualization-card h3,
+.recommendation-card h3 {
+  margin-top: 0;
+}
+
+.calculation-block {
+  margin: 1.25rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f3f4f6;
+  overflow-x: auto;
+}
+
+.calculation-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.calculation-block code {
+  font-family: "Courier New", monospace;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.project-content-wide {
+  max-width: 1200px;
+}
+
+.dashboard-figure img {
+  width: 100%;
+  height: auto;
+}
+
+.recommendation-banner {
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 14px;
+  background: var(--surface-color);
+  text-align: center;
+}
+
+.recommendation-label {
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.recommendation-banner h3 {
+  margin: 0 0 0.75rem;
+  font-size: 2rem;
+}
+
+@media (max-width: 800px) {
+  .objective-grid,
+  .data-grid,
+  .visualization-grid,
+  .recommendation-grid {
+    grid-template-columns: 1fr;
+  }
+}
