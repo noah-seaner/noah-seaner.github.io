@@ -1207,3 +1207,193 @@ button:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================
+   Grammy Web Analytics Page
+========================================== */
+
+.metric-comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  max-width: 760px;
+  margin: 2rem auto;
+}
+
+.metric-card-custom {
+  padding: 1.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--surface-color);
+  text-align: center;
+}
+
+.metric-label {
+  margin: 0 0 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.metric-value {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.definition-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.definition-card {
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--surface-color);
+}
+
+.definition-card h3 {
+  margin-top: 0;
+}
+
+.table-wrapper {
+  width: 100%;
+  margin: 2rem 0 3rem;
+  overflow-x: auto;
+}
+
+.results-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  background: var(--surface-color);
+}
+
+.results-table caption {
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.results-table th,
+.results-table td {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.results-table thead th {
+  background: var(--surface-alt-color);
+}
+
+.results-table tbody th {
+  font-weight: 600;
+}
+
+.mobile-highlight {
+  max-width: 520px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  background: var(--surface-color);
+  text-align: center;
+}
+
+.mobile-highlight-value {
+  margin: 0;
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.mobile-highlight-label {
+  margin: 0.5rem 0 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.comparison-card {
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--surface-color);
+}
+
+.comparison-card h3 {
+  margin-top: 0.35rem;
+}
+
+.comparison-label {
+  margin: 0;
+  color: var(--accent-color);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.hypothesis-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.hypothesis-card {
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--surface-color);
+}
+
+.hypothesis-card h3 {
+  margin-top: 0;
+}
+
+.test-result-callout {
+  margin: 2rem 0;
+  padding: 2rem;
+  border-left: 4px solid var(--accent-color);
+  border-radius: 10px;
+  background: var(--surface-color);
+}
+
+.test-result-label {
+  margin: 0 0 0.5rem;
+  color: var(--accent-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.test-result-callout h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 800px) {
+  .metric-comparison-grid,
+  .definition-grid,
+  .comparison-grid,
+  .hypothesis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-value {
+    font-size: 1.75rem;
+  }
+
+  .mobile-highlight-value {
+    font-size: 2.75rem;
+  }
+}
