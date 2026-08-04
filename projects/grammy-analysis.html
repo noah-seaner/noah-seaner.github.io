@@ -1,1 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewpoint"
+    content="width-device-width, initial-scale=1.0"
+    >
+
+  <meta
+    name="description"
+    content="An Excel-based analytics case study evaluating the February 2022 split of grammy.com into separate Grammy and Recording Academy websites."
+    >
+
+  <title>
+    Grammy Website Split Analytics | Noah Seaner
+  </title>
+
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+        <div class="container header-inner">
+
+            <a href="../index.html" class="site-logo">
+                Noah Seaner
+            </a>
+
+            <nav class="site-nav">
+
+                <ul class="nav-list">
+
+                    <li>
+                        <a href="../index.html#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#projects">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#resume">Resume</a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+    </header>
+
+  <main>
+
+    <!-- Project Hero -->
+    <section class="project-hero section">
+      <div class="container">
+
+        <p class="eyebrow">
+          Business Intelligence • Web Analytics
+        </p>
+
+        <h1>
+          Evaluating the Grammy Website Split with Web Analytics
+        </h1>
+
+        <p class="project-subtitle">
+          An Excel-based analysis of website traffic, audience engagement,
+          mobile behavior, competitor performance, and statistical evidence
+          following the February 2022 separation of grammy.com and
+          therecordingacademy.com
+        </p>
+
+        <div class="project-meta">
+
+          <div>
+            <span class="project-meta-label">Tools</span>
+            <span>Excel, PivotTables, Data Analysis Toolpak</span>
+          </div>
+
+          <div>
+            <span class="project-meta-label">Methods</span>
+            <span>KPI Analysis, Competitor Benchmarking, A/B Testing</span>
+          </div>
+
+          <div>
+            <span class="project-meta-label">Domain</span>
+            <span>Digital Analytics and Media</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Summary -->
+    <section class="section section-alt">
+
+      <div class="container project-content">
+
+        <h2>Project Summary</h2>
+
+        <p>
+          In February 2022, the original grammy.com website was divided into
+          two separate digital properties. The continuing grammy.com site
+          focused on the Grammy Awards and related music content, while
+          therecordingacademy.com became the primary site for information
+          about the Recording Academy as an organization.
+        </p>
+
+        <p>
+          The purpose of this project was to evaluate whether the split improved
+          website performance enough to justify maintaining two separate sites.
+          Using Excel, I compared website traffic and engagement before and
+          after the split, evaluated mobile usage, benchmarked performance
+          against the American Music Awards website, and performed an A/B test
+          on pages per session.
+        </p>
+
+        <p>
+          Based on the overall improvement in session depth and bounce rate, I
+          recommended that the two websites remain separate while teh team
+          continued to improve content discovery, visit duration, and the
+          mobile experience.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Business Problem -->
+    <section class="section section">
+      <div class="container project-content">
+
+        <h2>Business Problem</h2>
+
+        <p>
+          Separating one established website into two distinct digital
+          properties can clarify each site's purpose, but it can also divide
+          traffic, complicate navigation, and weaken engagement if visitors do
+          not understand where to find relevant content.
+        </p>
+
+        <p>
+          The analysis was designed to answer the following decision question:
+        </p>
+
+        <blockquote class="project-question">
+          Did the February 2022 website split improve digital engagement enough
+          to justify keeping grammy.com and therecordingacademy.com separate?
+        </blockquote>
+
+        <div class="objective-grid">
+
+          <article class="objective-card">
+
+            <h3>Measure Traffic Patterns</h3>
+
+            <p>
+              Evaluate daily website traffic and distinguish normal visitor
+              activity from Grammy Award event-day spikes.
+            </p>
+
+          </article>
+
+          <article class="objective-card">
+
+            <h3>Compare Engagement</h3>
+
+            <p>
+              Compare pages per session, bounce rate, and average time on site
+              before and after the split.
+            </p>
+
+          </article>
+
+          <article class="objective-card">
+
+            <h3>Evaluate Mobile Behavior</h3>
+
+            <p>
+              Determine how much of the grammy.com audience visisted from mobile
+              devices.
+            </p>
+
+          </article>
+
+          <article class="objective-card">
+
+            <h3>Benchmark Performance</h3>
+
+            <p>
+              Compare Grammy website metrics with the American Music Awards
+              website to identify strengths and improvement opportunities.
+            </p>
+
+          </article>
+
+          <article class="objective-card">
+
+            <h3>Test Statistical Significance</h3>
+
+            <p>
+              Determine whether the post-split change in pages per session was
+              statistically significant.
+            </p>
+
+          </article>
+
+          <article class="objective-card">
+
+            <h3>Recommend a Website Strategy</h3>
+
+            <p>
+              Use the combined evidence to recommend whether the organization
+              should keep the websites separate or merge them again.
+            </p>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Data -->
+    <section class="section section-alt">
+      <div class="container project-content">
+
+        <h2>Data</h2>
+
+        <p>
+          The project used two datasets containing daily website performance
+          data.
+        </p>
+
+        <div class="data-grid">
+
+          <article class="data-card">
+
+            <h3>Grammy.com Dataset</h3>
+
+            <p>
+              This dataset included website activity for the original combined
+              grammy.com site before February 2022 and activity for the
+              continuing grammy.com site after the split.
+            </p>
+
+          </article>
+
+          <article class="data-card">
+
+            <h3>Recording Academy Dataset</h3>
+
+            <p>
+              This dataset contained performance data for
+              therecordingacademy.com after the website split.
+            </p>
+
+          </article>
+        
+        </div>
+
+        <p>
+          The available fields supported the calculation and comparison of
+          several website-performance measures, including:
+        </p>
+
+        <ul>
+          <li>Daily visitors</li>
+          <li>Sessions</li>
+          <li>Page views</li>
+          <li>Bounced sessions</li>
+          <li>Average session duration</li>
+          <li>Mobile visitors</li>
+          <li>Date</li>
+        </ul>
+
+        <p>
+          The pre-split grammy.com data represented the performance of the
+          original contained website. The post-split period contained separate
+          measures for the new grammy.com and therecordingacademy.com sites.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Analytical Approach -->
+    <section class="section section-alt">
+      <div class="container project-content">
+
+        <h2>Analytical Approach</h2>
+
+        <p>
+          I used Excel to clean, aggregate, compare, and visualize the website
+          data. The workflow combined descriptive analysis with competitor
+          benchmarking and hypothesis testing.
+        </p>
+
+        <div class="method-steps">
+
+          <div class="method-step">
+
+            <span class="method-step-number">1</span>
+
+            <div>
+              
+              <h3>Analyze Daily Traffic</h3>
+
+              <p>
+                Create a line chart showing daily grammy.com visitors and use a 
+                PivotTable to compare Grammy Award dates with normal days.
+              </p>
+            
+            </div>
+          </div>
+
+          <div class="method-step">
+
+            <span class="method-step-number">2</span>
+
+            <div>
+
+              <h3>Calculate Engagement KPIs</h3>
+
+              <p>
+                Use Excel functions, including SUM and SUMIF, to calculate
+                pages per session, bounce rate, and average time on site.
+              </p>
+              
+            </div>
+          </div>
+
+          <div class="method-step">
+
+            <span class="method-step-number">3</span>
+
+            <div>
+
+              <h3>Evaluate Mobile Usage</h3>
+
+              <p>
+                Calculate mobile visitors as a percentage of total grammy.com
+                visitors.
+              </p>
+              
+            </div>
+          </div>
+
+          <div class="method-step">
+
+            <span class="method-step-number">4</span>
+
+            <div>
+
+              <h3>Benchmark Against a Competitor</h3>
+
+              <p>
+                Compare Grammy website performance with the American Music
+                Awards website using shared engagement metrics.
+              </p>
+              
+            </div>
+          </div>
+
+          <div class="method-step">
+
+            <span class="method-step-number">5</span>
+
+            <div>
+
+              <h3>Perform an A/B Test</h3>
+
+              <p>
+                Use Excel's Data Analysis Toolpak to test whether the difference
+                in pages per session between the combined and post-split
+                grammy.com websites was statistically significant.
+              </p>
+              
+            </div>
+          </div>
+
+          <div class="method-step">
+
+            <span class="method-step-number">6</span>
+
+            <div>
+
+              <h3>Develop a Recommendation</h3>
+
+              <p>
+                Evaluate the combined evidence and recommend whether the two
+                websites should remain separate.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Traffic Analysis -->
+    <section class="section section">
+      <div class="container project-content">
+
+        <h2>Visitor Traffic and Grammy-Day Impact</h2>
+
+        <p>
+          The daily visitor chart showed that grammy.com traffic was strongly
+          influenced by the Grammy Awards. Large visitor spikes appeared around
+          ceremony dates, making it important to separate event-driven traffic
+          from normal website activity.
+        </p>
+
+        <figure class="case-study-figure">
+
+          <img
+            src="../assets/images/grammy/thumbnail.png"
+            alt="Line chart showing daily grammy.com visitors with major traffic spikes around Grammy Award dates."
+            loading="lazy"
+            >
+
+          <figcaption>
+            Daily grammy.com visitor activity, including large increases around
+            Grammy Award dates.
+          </figcaption>
+
+        </figure>
+
+        <div class="metric-comparison-grid">
+
+          <article class="metric-card-custom">
+
+            <p class="metric-label">Grammy Award Day Visitors</p>
+            <p class="metric-value">1,389,590</p>
+
+          </article>
+
+          <article class="metric-card-custom">
+
+            <p class="metric-label">Normal Day Visitors</p>
+            <p class="metric-value">32,388</p>
+
+          </article>
+
+        </div>
+
+        <p>
+          The difference confirmed that the ceremony was the primary driver of
+          the site's largest traffic spikes. Event dates therefore needed to be
+          considered separately when evaluating typical website performance.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Engagement Results -->
+    <section class="section section-alt">
+      <div class="container project-content">
+
+        <h2>Engagement Before and After the Split</h2>
+
+        <p>
+          Three KPIs were used to evaluate how visitor behavior changed after
+          the original website was divided:
+        </p>
+
+        <div class="definition-grid">
+
+          <article class="definition-card">
+
+            <h3>Pages per Session</h3>
+
+            <p>
+              The average number of pages viewed during a website session.
+            </p>
+
+          </article>
+
+          <article class="definition-card">
+
+            <h3>Bounce Rate</h3>
+
+            <p>
+              The percentage of sessions in which a visitor left without
+              viewing an additional page.
+            </p>
+
+          </article>
+
+          <article class="definition-card">
+
+            <h3>Average Time on Site</h3>
+
+            <p>
+              The amount of time (in seconds) a visitor spent on the website during
+              a session.
+            </p>
+
+          </article>
+
+        </div>
+
+        <div class="table-wrapper">
+
+          <table class="results-table">
+
+            <caption>
+              Website engagement before and after the February 2022 split
+            </caption>
+
+            <thead>
+
+              <tr>
+                <th scope="col">
+                  Website
+                </th>
+
+                <th scope="col">
+                  Pages per Session
+                </th>
+
+                <th scope="col">
+                  Bounce Rate
+                </th>
+
+                <th scope="col">
+                  Average Time on Site
+                </th>
+              </tr>
+
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <th scope="row">
+                  Original combined grammy.com
+                </th>
+
+                <td>
+                  1.86
+                </td>
+
+                <td>
+                  41.6%
+                </td>
+
+                <td>
+                  102 seconds
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">
+                  Post-split grammy.com
+                </th>
+
+                <td>
+                  2.25
+                </td>
+
+                <td>
+                  40.2%
+                </td>
+
+                <td>
+                  83 seconds
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">
+                  therecordingacademy.com
+                </th>
+
+                <td>
+                  2.78
+                </td>
+
+                <td>
+                  33.7%
+                </td>
+
+                <td>
+                  129 seconds
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+        <h3>Pages per Session</h3>
+
+        <p>
+          The original combined website averaged
+          <strong>1.86 pages per session</strong>. Following the split,
+          grammy.com increased to <strong>2.25</strong>, while
+          therecordingacademy.com averaged <strong>2.78</strong>.
+        </p>
+
+        <p>
+          Both post-split websites therefore generated greater session depth
+          than the combined site, suggesting that visitors explored more
+          content after the websites were separated.
+        </p>
+
+        <h3>Bounce Rate</h3>
+
+        <p>
+          The combined website had a bounce rate of
+          <strong>41.6%</strong>. AFter the split, the rate declined to
+          <strong>40.2% on grammy.com</strong> and
+          <strong>33.7% on therecordingacademy.com</strong>.
+        </p>
+
+        <p>
+          The lower rates indicated that visitors were less likely to leave
+          after viewing only one page, with the strongest improvement appearing
+          on therecordingacademy.com.
+        </p>
+
+        <h3>Average Time on Site</h3>
+
+        <p>
+          Visitors spent an average of <strong>102 seconds</strong> on the
+          original combined website. After the split, average time decreased to
+          <strong>83 seconds on grammy.com</strong> but increased to
+          <strong>129 seconds on therecordingacademy.com</strong>.
+        </p>
+
+        <p>
+          The result was mixed rather than uniformly positive. The Recording
+          Academy site generated deeper and longer sessions, while grammy.com
+          generated more page views per visit but shorter overall sessions.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Mobile Analysis -->
+    <section class="section section">
+      <div class="container project-content">
+
+        <h2>Mobile Audience Analysis</h2>
+
+        <div class="mobile-highlight">
+
+          <p class="mobile-highlight-value">74%</p>
+          <p class="mobile-highlight-label">of grammy.com visitors used mobile devices</p>
+
+        </div>
+
+        <p>
+          Nearly three-quarters of grammy.com visitors accessed the website
+          from mobile devices. This made the mobile experience a central
+          business consideration rather than a secondary design concern.
+        </p>
+
+        <p>
+          Improving page speed, navigation, readability, content hierarchy, and
+          mobile responsiveness could therefore affect the majority of the
+          site's audience.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Competitor Benchmarking -->
+    <section class="section section-alt">
+
+      <div class="container project-content">
+
+        <h2>Competitor Benchmarking</h2>
+
+        <p>
+          I compared grammy.com with the American Music Awards website (theAMAs.com)
+          to identify areas of relative strength and opportunities
+          for improvement.
+        </p>
+
+        <div class="comparison-grid">
+
+          <article class="comparison-card">
+
+            <p class="comparison-label">Relative Strength</p>
+            <h3>Lower Bounce Rate</h3>
+
+            <p>
+              Grammy.com performed better than theAMAs.com on bounce rate,
+              suggesting that the Grammy visitors were less likely to leave
+              after viewing only a single page.
+            </p>
+
+          </article>
+
+          <article class="comparison-card">
+
+            <p class="comparison-label">Improvement Opportunity</p>
+            <h3>Pages per Visit</h3>
+
+            <p>
+              Grammy.com trailed the competitor in pages per visit, indicating
+              an opportunity to improve navigation and encourage additional
+              content discovery.
+            </p>
+
+          </article>
+
+          <article class="comparison-card">
+
+            <p class="comparison-label">Improvement Opportunity</p>
+            <h3>Visit Duration</h3>
+
+            <p>
+              Visitors spent less time on grammy.com than on the the competitor's
+              site, suggesting that the content experience could be strengthened
+              to retain visitors for longer periods.
+            </p>
+
+          </article>
+
+          <article class="comparison-card">
+
+            <p class="comparison-label">Audience Difference</p>
+            <h3>Mobile Share</h3>
+
+            <p>
+              Grammy.com had a lower percentage of mobile visitors than
+              theAMAs.com. This difference may reflect audience or content
+              strategy and warranted further investigation.
+            </p>
+
+          </article>
+
+        </div>
+
+        <p>
+          I recommended a deeper review of the competitor's navigation, content
+          structure, and mobile experience to identify practices that might
+          improve content discovery and visit duration on grammy.com,
+        </p>
+
+      </div>
+    </section>
+
+    <!-- A/B Test -->
+    <section class="section section">
+      <div class="container project-content">
+
+        <h2>A/B Test</h2>
+
+        <p>
+          I used Excel's Data Analysis Toolpak to evaluate whether the
+          difference in pages per session between the original combined website
+          and the post-split grammy.com site was statistically significant.
+        </p>
+
+        <div class="hypothesis-grid">
+
+          <article class="hypothesis-card">
+
+            <h3>Null Hypothesis</h3>
+
+            <p>
+              There was no statistically meaningful difference in pages per
+              session between the combined website and the post-split
+              grammy.com website.
+            </p>
+
+          </article>
+
+          <article class="hypothesis-card">
+
+            <h3>Alternative Hypothesis</h3>
+
+            <p>
+              There was a statistically meaningful difference in pages per
+              session between the combined website and the post-split
+              grammy.com website.
+            </p>
+
+          </article>
+        </div>
+
+        <div class="test-result-callout">
+
+          <p class="test-result-label">Statistical Result</p>
+          <h3>Significant at the 95% Confidence Level</h3>
+
+          <p>
+            The analysis found that the difference between the original
+            website's 1.86 pages per session and the post-split grammy.com
+            site's 2.25 pages per session was statistically significant at the
+            95% confidence level.
+          </p>
+
+          <p>
+            This result provided evidence that the increase in session depth
+            was unlikely to be explained only by normal variation in the
+            observed data.
+          </p>
+
+        </div>
+
+        <figure class="case-study-figure">
+
+          <img
+            src="../assets/images/grammy/ab-test-results.png"
+            alt="Excel Data Analysis Toolpak output for the pages-per-session A/B test"
+            loading="lazy"
+            >
+
+          <figcaption>
+            Excel statistical test comparing pages per session for the original
+            combined website and the post-split grammy.com site.
+          </figcaption>
+
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- Key Findings -->
+    <section class="section section-alt">
+      <div class="container project-content">
+
+        <h2>Key Findings</h2>
+
+        <div class="key-findings-grid">
+
+          <article class="key-finding">
+
+            <h3>The split increased session depth</h3>
+
+            <p>
+              Both post-split websites generated more pages per session than
+              the original combined website.
+            </p>
+
+          </article>
+
+          <article class="key-finding">
+
+            <h3>Bounce rates improved</h3>
+
+            <p>
+              Visitors were less likely to leave after one page on both
+              post-split websites, with the strongest improvement occurring on
+              therecordingacademy.com.
+            </p>
+
+          </article>
+
+          <article class="key-finding">
+
+            <h3>The sites supported different browser patterns</h3>
+
+            <p>
+              Grammy.com generated greater session depth but shorter visits,
+              while therecordingacademy.com recorded both deeper and longer
+              sessions.
+            </p>
+
+          </article>
+
+          <article class="key-finding">
+
+            <h3>Mobile optimization was critical</h3>
+
+            <p>
+              With approximately 74% of visitors using mobile devices,
+              improvements to the mobile experience could affect most of the
+              grammy.com audience.
+            </p>
+
+          </article>
+
+          <article class="key-finding">
+
+            <h3>Grammy-day traffic required separate interpretation</h3>
+
+            <p>
+              Event-day visitor totals were dramatically higher than normal-day
+              traffic, making ceremony timing an important factor in website
+              analysis.
+            </p>
+
+          </article>
+
+          <article class="key-finding">
+
+            <h3>The statistical test supported the engagement improvement</h3>
+
+            <p>
+              The increase in grammy.com's pages per session was statistically
+              significant at the 95% confidence level.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Recommendation -->
+    <section class="section section">
+      <div class="container project-content">
+
+        <h2>Recommendation</h2>
+
+        <div class="recommendation-banner">
+
+          <p class="recommendation-label">Recommended Strategy</p>
+
+          <h3>Keep the Websites Separate</h3>
+
+          <p>
+            The post-split websites produced higher pages per session and lower
+            bounce rates than the original combined website.
+          </p>
+
+        </div>
+
+        <p>
+          The strongest post-split results appeared on
+          therecordingacademy.com, which recorded the highest pages per session,
+          the lowest bounce rate, and the longest average time on site. The new
+          grammy.com also improved in pages per session and bounce rate, and the
+          A/B test provided statistical evidence that its increase in session
+          depth was meaningful.
+        </p>
+
+        <p>
+          Although average time on grammy.com declined, the overal engagement
+          evidence supported maintaining the split rather than recombining the
+          sites.
+        </p>
+
+        <p>
+          I also recommended that the team perform a deeper analysis of
+          theAMAs.com. Grammy.com outperformed the competitor on bounce
+          rate but trailed it in pages per visit and visit duration. 
+          Studying the competitor's navigation, content structure, and
+          mobile presentation could reveal opportunities for further
+          improvement.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Limitations -->
+    <section class="section section-alt">
+      <div class="container project-content">
+
+        <h2>Limitations</h2>
+
+        <ul>
+          <li>
+            Website traffic was strongly influenced by Grammy Award dates,
+            seasonality, and event-driven spikes.
+          </li>
+
+          <li>
+            The pre-split and post-split periods differed in length,
+            promotional activity, content strategy, and external
+            conditions.
+          </li>
+
+          <li>
+            The analysis identified performance changes following the split but
+            could not establish that the split alone caused those changes.
+          </li>
+
+          <li>
+            Pages per session, bounce rate, and time on site did not measure
+            whether visitors completed specific organizational goals or
+            conversions.
+          </li>
+
+          <li>
+            The datasets did not include detailed acquisition-channel,
+            content-level, demographic, conversion, or user-journey data.
+          </li>
+
+          <li>
+            Combining post-split metrics mathematically does not perfectly
+            recreate how visitors experienced the original unified website.
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- Reflection -->
+    <section class="section section">
+      <div class="containter project-content">
+
+        <h2>Reflection</h2>
+
+        <p>
+          This project reinforced the importance of connecting web analytics to
+          a specific organizational decision. Rather than reporting traffic and
+          engagement metrics in isolation, I evaluated how each KPI contributed
+          to the question of whether the Recording Academy should maintain the 
+          separate websites.
+        </p>
+
+        <p>
+          The project also demonstrated why no single KPI should determine a
+          strategic recommendation. Pages per session and bounce rate improved
+          after the split, but average time on site moved in different
+          directions across the two websites. Evaluating those results together
+          produced a more balanced interpretation of how visitor behavior
+          changed.
+        </p>
+
+        <p>
+          Using PivotTables, Excel formulas, competitor benchmarking, and
+          statistical testing strengthened my ability to move from raw website
+          activity to a clear business recommendation. The analysis also
+          highlighted the need to separate event-driven traffic from ordinary
+          behavior and consider how device usage affects digital strategy.
+        </p>
+
+        <p>
+          A future version of this project could incorporate conversions,
+          acquisition channels, content-level engagement, audience segments,
+          user journeys, and device-specific behavior. Those additions would
+          provide a clearer understanding of not only how long visitors stayed
+          or how many pages they viewed, but whether each site helped users
+          accomplish its intended purpose.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Project Navigation -->
+     <section class="section section-alt">
+
+        <div class="container project-links">
+
+            <a
+                class="button button-secondary"
+                href="../index.html#projects"
+            >
+                ← Back to Projects
+            </a>
+
+        </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <p>
+                © 2026 Noah Seaner
+            </p>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="../index.html#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="../index.html#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
