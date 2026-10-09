@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Schmetsy Database: a relational database design and SQL implementation project using Microsoft Access."
+  >
+
+  <title>Schmetsy Database | Noah Seaner</title>
+
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+        <div class="container header-inner">
+
+            <a href="../index.html" class="site-logo">
+                Noah Seaner
+            </a>
+
+            <nav class="site-nav">
+
+                <ul class="nav-list">
+
+                    <li>
+                        <a href="../index.html#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#projects">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#resume">Resume</a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+    </header>
+
+  <main>
+    <section class="project-hero section">
+      <div class="container">
+        <p class="eyebrow">
+          Database Management • SQL • Microsoft Access
+        </p>
+
+        <h1>Schmetsy Database</h1>
+
+        <p class="project-subtitle">
+          Designing, constructing, and populating a
+          relational database for a hypothetical
+          sports merchandise business.
+        </p>
+
+        <div class="project-meta">
+          <span>SQL</span>
+          <span>Microsoft Access</span>
+          <span>Relational Database Design</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2>Project Summary</h2>
+
+        <p>
+          For my Fundamentals of Database Management
+          Systems course at Saint Joseph's University,
+          I developed Schmetsy, a hypothetical
+          sports merchandise database using Microsoft
+          Access and SQL.
+        </p>
+
+        <p>
+          The project involved creating five relational
+          tables, defining primary and foreign keys,
+          populating records, and updating existing data
+          using SQL statements.
+        </p>
+
+        <p>
+          The finished database organizes information
+          about customers, merchandise, orders,
+          individual order details, and shipping
+          providers.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Project Objective</h2>
+
+        <p class="research-question">
+          How can a relational database be designed
+          and implemented to organize customer,
+          product, order, and shipping information
+          while maintaining consistent relationships
+          between records?
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2>Database Architecture</h2>
+
+        <p>
+          The database consists of five tables
+          connected through four one-to-many
+          relationships. Primary keys uniquely
+          identify records, while foreign keys
+          associate related information across tables.
+        </p>
+
+        <figure>
+          <img
+            class="schema-image"
+            src="../assets/images/schmetsy-db/relationships.png"
+            alt="Microsoft Access entity-relationship diagram
+                  showing five related database tables"
+            loading="lazy"
+            >
+
+          <figcaption>
+            Figure 1. Schmetsy relational database
+            structure in Microsoft Access.
+          </figcaption>
+        </figure>
+
+        <h3>Database Tools</h3>
+
+        <ul>
+          <li>
+            <strong>CustomersTable:</strong>
+            Customer names, contact identifiers,
+            and fictional address information.
+          </li>
+
+          <li>
+            <strong>ProductsTable:</strong>
+            Merchandise descriptions, prices,
+            and inventory quantities.
+          </li>
+
+          <li>
+            <strong>ShippersTable:</strong>
+            Shipping provider names and fictional
+            contact information.
+          </li>
+
+          <li>
+            <strong>OrdersTable:</strong>
+            Order dates and associated customer
+            and shipper identifiers.
+          </li>
+
+          <li>
+            <strong>OrderDetailsTable:</strong>
+            Individual products and quantities
+            associated with each order.
+          </li>
+        </ul>
+
+        <h3>Table Relationships</h3>
+
+        <ul>
+          <li>Customers → Orders</li>
+          <li>Shippers → Orders</li>
+          <li>Orders → Order Details</li>
+          <li>Products → Order Details</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>SQL Implementation</h2>
+
+        <p>
+          I wrote SQL statements to define the database
+          structure, insert records into the tables,
+          and correct data-entry errors.
+        </p>
+
+        <p>
+          The following examples are taken from
+          the SQL queries used in the project.
+        </p>
+
+        <h3>1. Creating Relational Tables</h3>
+
+        <p>
+          The CREATE TABLE statement below defines
+          the Orders table, including its primary key,
+          customer reference, shipping provider
+          reference, and order date.
+        </p>
+
+        <div class="sql-example">
+          <pre><code>CREATE TABLE OrdersTable
+          (
+          OrderID AUTOINCREMENT PRIMARY KEY,
+          CustomerNo_FK INTEGER REFERENCES CustomersTable(CustomerID),
+          OrderDate DATETIME,
+          ShipID_FK INTEGER REFERENCES ShippersTable(ShipperID)
+          );</code></pre>
+        </div>
+
+        <h3>2. Populating Database Records</h3>
+
+        <p>
+          INSERT INTO statements were used to
+          populate the database. This example
+          adds a product and quantity to an order
+          in the OrderDetails table.
+        </p>
+
+        <div class="sql-example">
+          <pre><code>INSERT INTO OrderDetailsTable (OrderID_FK, ProductID_FK, QuantityOrdered)
+          VALUES (6, 6, 15);</code></pre>
+        </div>
+
+        <h3>3. Updating Existing Records</h3>
+
+        <p>
+          UPDATE statements were used to correct
+          existing records. This example modifies
+          an order data using a specific order ID.
+        </p>
+
+        <div class="sql-example">
+          <pre><code>UPDATE OrdersTable
+            SET OrderDate = #2/4/2020#
+            WHERE OrderID = 3;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2>Skills Demonstrated</h2>
+
+        <ul>
+          <li>
+            <strong>Relational Database Design:</strong>
+            Structuring information across multiple
+            interconnected tables.
+          </li>
+
+          <li>
+            <strong>SQL Programming:</strong>
+            Writing data definition and data
+            manipulation statements.
+          </li>
+
+          <li>
+            <strong>Data Integrity:</strong>
+            Establishing primary and foreign
+            key relationships.
+          </li>
+
+          <li>
+            <strong>Database Management:</strong>
+            Creating, populating, and maintaining
+            records in Microsoft Access.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Explore the Project</h2>
+
+        <p>
+          Download the completed Microsoft Access
+          database or review the original SQL
+          queries used to construct and populate it.
+        </p>
+
+        <div class="download-links">
+          <a href="../assets/documents/NoahSeaner_SchmetsyDB.accdb"
+            download>
+            Download Access Database
+          </a>
+
+          <a href="../assets/documents/SchmetsyDB-Queries.sql"
+            download>
+            Download SQL Queries
+          </a>
+        </div>
+
+        <p>
+          <strong>Note:</strong>
+          This is a hypothetical academic database.
+          Some customer and shipping provider names
+          refer to real people or organizations,
+          but associated contact information,
+          transactions, and business records
+          are fictional.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <a href="../index.html#projects">
+          ← Back to All Projects
+        </a>
+      </div>
+    </section>
+        
+  </main>
+</body>
+
+
+<!-- ==========================================
+         Footer
+    =========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <p>
+                © 2026 Noah Seaner
+            </p>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="../index.html#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="../index.html#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+      </footer>
+
+</html>
