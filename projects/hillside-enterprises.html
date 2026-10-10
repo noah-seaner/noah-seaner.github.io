@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, intitial-scale=1.0">
+
+    <meta name="description"
+      content="Hillside Enterprises business analytics
+      case study featuring forecasting, simulation,
+      decision analysis, and revenue optimization.">
+
+    <title>Hillside Enterprises | Noah Seaner</title>
+    <link rel="stylesheet" href="../styles.css">
+
+  </head>
+
+  <body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a href="../index.html" class="site-logo">
+                Noah Seaner
+            </a>
+
+            <nav class="site-nav">
+
+                <ul class="nav-list">
+
+                    <li>
+                        <a href="../index.html#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#projects">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#resume">Resume</a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+      <section class="project-hero section">
+        <div class="conatiner">
+
+          <p class="eyebrow">
+            Business Analytics • Excel • Decision Modeling
+          </p>
+
+          <h1>
+            Hillside Enterprises: Business Analytics
+          </h1>
+
+          <p class="project-subtitle">
+            Applying forecasting, Monte Carlo simulation,
+            decision analysis, and linear programming to
+            improve operational decision-making.
+          </p>
+
+          <div class="project-meta">
+            <div>
+              <strong>Tools:</strong> Microsoft Excel
+            </div>
+            <div>
+              <strong>Methods:</strong>
+              Forecasting, Simulation, Decision Trees,
+              Linear Programming
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <article class="case-study-body">
+
+        <section>
+          <h2>Executive Summary</h2>
+
+          <p>
+            Hillside Enterprises faced four business
+            challenges involving shipment forecasting,
+            transportation efficiency, technology
+            investment, and product allocation.
+          </p>
+
+          <p>
+            Using quantitative modeling techniques in
+            Microsoft Excel, I evaluated alternative
+            strategies and developed recommendations
+            designed to improve operational performance
+            and support management decisions.
+          </p>
+
+          <figure>
+            <img
+              src="../assets/images/hillside-enterprises/exec-summary.png"
+              alt="Executive summary of Hillside Enterprises
+              forecasting, transportation, technology,
+              and revenue optimization findigns"
+              loading="lazy"
+              >
+
+            <figcaption>
+              Figure 1. Executive summary of the
+              four business analytics investigations.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section>
+          <h2>Project Objective</h2>
+
+          <p>
+            The objective of this case study was to
+            apply quantitative analytical methods to
+            four operational problems and translate
+            the results into actionable business
+            recommendations.
+          </p>
+
+          <ul>
+            <li>
+              Identify an accurate method for
+              forecasting monthly shipments.
+            </li>
+            <li>
+              Determine the most efficient
+              transporation route.
+            </li>
+            <li>
+              Evaluate whether investing in new
+              software would be financially beneficial.
+            </li>
+            <li>
+              Optimize production allocation to
+              maximize hourly revenue.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>1. Shipment Forecasting</h2>
+
+          <p>
+            I evaluated multiple forecasting techniques
+            to predict future product shipments,
+            including moving averages, exponential
+            smoothing, and linear regression.
+          </p>
+
+          <p>
+            The models were compared using their
+            reported mean squared error (MSE) to 
+            identify the most accurate forecasting
+            approach.
+          </p>
+
+          <div class="results-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Forecasting Model</th>
+                  <th>Reported Error</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>3-Month Moving Average</td>
+                  <td>201,432.5</td>
+                </tr>
+                <tr>
+                  <td>Linear Regression</td>
+                  <td>204,357.4</td>
+                </tr>
+                <tr>
+                  <td>Exponential Smoothing</td>
+                  <td>212,752.6</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Key Finding</h3>
+
+          <p>
+            The three-month moving average produced
+            the lowest reported forecasting error
+            among the evaluated models.
+          </p>
+
+          <p>
+            Using this approach, the forecast for
+            January 2025 was approximately
+            <strong>6,681 shipments</strong>.
+          </p>
+
+          <h3>Recommendation</h3>
+
+          <p>
+            Use the three-month moving average as
+            the preferred forecasting baseline,
+            subject to consistent model validation.
+          </p>
+        </section>
+
+        <section>
+          <h2>2. Transportation Route Simulation</h2>
+
+          <h3>Methodology</h3>
+
+          <p>
+            I used Monte Carlo simulation to cmpare
+            three potential transporation routes.
+            Across 100 simulated runs, I evaluated
+            average travel time, median travel time,
+            and how frequently each route was quickest.
+          </p>
+
+          <div class="results-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Route</th>
+                  <th>Average Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Vine Street → Route 38</td>
+                  <td>24.41 minutes</td>
+                </tr>
+                <tr>
+                  <td>Vine Street → Route 70</td>
+                  <td>25.05 minutes</td>
+                </tr>
+                <tr>
+                  <td>Route 76 → Route 295</td>
+                  <td>25.48 minutes</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Key Finding</h3>
+
+          <p>
+            Traveling via Vine Street and
+            Route 38 produced the lowest
+            average simulated travel time of
+            <strong>24.41 minutes</strong>.
+          </p>
+
+          <p>
+            This route was the fastest in
+            <strong>48% of simulations</strong>.
+          </p>
+
+          <h3>Recommendation</h3>
+
+          <p>
+            Prioritize this route for furher operational
+            testing, while validating its performance
+            under real traffic conditions.
+          </p>
+        </section>
+
+        <section>
+          <h2>3. Technology Investment Decisions</h2>
+
+          <h3>Methodology</h3>
+
+          <p>
+            I used decision-tree analysis and expected
+            monetary value calculation to evaluate
+            whether Hillside Enterprises should
+            replace its existing software with a
+            new AI-based system.
+          </p>
+
+          <p>
+            The analysis also considered hiring an
+            expert who could provide additional
+            information about the likelihood of
+            the new software succeeding.
+          </p>
+
+          <div class="results-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Decision Scenario</th>
+                  <th>Reported Expected Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Keep Existing Software</td>
+                  <td>$150,000</td>
+                </tr>
+                <tr>
+                  <td>Direct AI Upgrade</td>
+                  <td>$130,000</td>
+                </tr>
+                <tr>
+                  <td>Decision with Expert Consultation</td>
+                  <td>$174,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Key Finding</h3>
+
+          <p>
+            Without additional information, retaining
+            the existing software produced a higher
+            expected value than upgrading directly.
+          </p>
+
+          <p>
+            Expert consultation increased the reported
+            expected value of the decision strategy
+            to $174,000, compared with $150,000
+            without expert information.
+          </p>
+
+          <p>
+            The expert charged $10,000, so the fee
+            must be accounted for when comparing
+            the final financial decision.
+          </p>
+
+          <h3>Recommendation</h3>
+
+          <p>
+            Avoid an unconditional AI software upgrade.
+            Evaluate the expert consultation option
+            after confirming the net expected value
+            and associated costs.
+          </p>
+        </section>
+
+        <section>
+          <h2>4. Product Revenue Optimization</h2>
+
+          <h3>Methodology</h3>
+
+          <p>
+            I used linear programming and Excel Solver
+            to determine an optimal allocation of 
+            72 production lines across four product 
+            categories, subject to the modeled
+            operational constraints.
+          </p>
+
+          <div class="results-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Product Category</th>
+                  <th>Allocated Lines</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Plain Protein Bars</td>
+                  <td>18</td>
+                </tr>
+                <tr>
+                  <td>Protein Bars with Real Fruit</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>Whole Grain Yogurt Bars</td>
+                  <td>30</td>
+                </tr>
+                <tr>
+                  <td>Whole Grain Yogurt Bars with Real Fruit</td>
+                  <td>24</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Key Finding</h3>
+
+          <p>
+            The optimal modeled allocated generated
+            a maximum hourly revenue of
+            <strong>$105,300</strong>.
+          </p>
+
+          <h3>Recommendation</h3>
+
+          <p>
+            Evaluate the oprimized product allocation
+            for implementation, ensuring that
+            production capacity, resouce availability,
+            and operating constraints remain feasible.
+          </p>
+        </section>
+
+        <section>
+          <h2>Business Recommendations</h2>
+
+          <div class="highlight">
+            <strong>Four Data-Driven Recommendations</strong>
+
+            <ul>
+              <li>
+                Adopt the three-month moving average
+                as the initial shipment forecasting
+                method.
+              </li>
+              <li>
+                Test traveling via Vine Street and
+                Route 38 as the preferred transportation
+                alternative.
+              </li>
+              <li>
+                Retain existing software unless
+                additional information supports
+                a more valuable investment decision.
+              </li>
+              <li>
+                Evalute the optimized production
+                allocation to maximize revenue.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Skills Demonstrated</h2>
+
+          <ul>
+            <li>Microsoft Excel and Excel Solver</li>
+            <li>Time Series Forecasting</li>
+            <li>Linear Regression</li>
+            <li>Monte Carlo Simulation</li>
+            <li>Decision Trees and Expected Values</li>
+            <li>Linear Programming and Optimization</li>
+            <li>Business Decision Analysis</li>
+            <li>Data-Driven Recommendations</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Project Limitations</h2>
+
+          <p>
+            This project was completed as an academic
+            business case study. Findings are based
+            on the provided data and model assumptions.
+            Recommendations should be validated using
+            real operational and financial information
+            before implementation.
+          </p>
+        </section>
+
+        <section>
+
+        <div class="container project-links">
+
+           <a
+                class="button button-secondary"
+                href="../index.html#projects"
+            >
+                ← Back to Projects
+            </a>
+
+        </div>
+
+    </section>
+      
+    </main>
+
+     <!-- ==========================================
+         Footer
+    =========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <p>
+                © 2026 Noah Seaner
+            </p>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="../index.html#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="../index.html#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </footer>
+    
+  </body>
+</html>
