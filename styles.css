@@ -1476,3 +1476,73 @@ button:focus-visible {
 .download-links a:hover {
       background: #334766;
     }
+
+.case-study-body {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+      line-height: 1.75;
+    }
+
+.case-study-body h2 {
+      margin: 2rem 0 0.7rem;
+    }
+
+.case-study-body h3 {
+      margin: 1.5rem 0 0.5rem;
+    }
+
+.case-study-body p {
+      margin: 0.8rem 0;
+    }
+
+.case-study-body figure {
+      margin: 2rem 0;
+    }
+
+.case-study-body img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+.case-study-body figcaption {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+.case-study-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+    }
+
+.case-study-body th,
+.case-study-body td {
+      text-align: left;
+      padding: 12px;
+      border-bottom: 1px solid #c9d3dd;
+    }
+
+.case-study-body ul {
+      padding-left: 1.5rem;
+    }
+
+.highlight {
+      background: #eaf2f7;
+      color: #17344a;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+
+.highlight p {
+      margin-bottom: 0;
+    }
+
+.results-table {
+      overflow-x: auto;
+   }
